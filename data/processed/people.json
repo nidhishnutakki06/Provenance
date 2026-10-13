@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Dr. Meera Iyer",
+    "role": "QA Head",
+    "topics": {
+      "audit": 6,
+      "deviation": 12,
+      "cold-chain": 8,
+      "data-integrity": 5,
+      "quality-system": 10,
+      "storage-temperature": 5,
+      "capa": 1,
+      "oos": 1,
+      "stability": 2,
+      "onboarding": 1,
+      "new-joiner": 1
+    },
+    "sources": [
+      "AUD-001",
+      "DI-001",
+      "EML-001",
+      "EML-004",
+      "EML-005",
+      "QM-001",
+      "SOP-014-v3",
+      "SOP-021",
+      "STB-001",
+      "TEAMS-COLDCHAIN"
+    ],
+    "evidence_count": 23
+  },
+  {
+    "name": "Priya Rao",
+    "role": "QA Lead",
+    "topics": {
+      "audit": 2,
+      "deviation": 13,
+      "cold-chain": 1,
+      "onboarding": 3,
+      "new-joiner": 1,
+      "quality-system": 3,
+      "capa": 4,
+      "oos": 1
+    },
+    "sources": [
+      "AUD-001",
+      "EML-002",
+      "EML-003",
+      "EML-004",
+      "ONB-001",
+      "QM-001",
+      "SOP-001",
+      "SOP-021",
+      "TEAMS-DEVIATIONS",
+      "TEAMS-QAHELP"
+    ],
+    "evidence_count": 13
+  },
+  {
+    "name": "Sana Khan",
+    "role": "QA Analyst",
+    "topics": {
+      "onboarding": 10,
+      "new-joiner": 8,
+      "deviation": 8,
+      "cold-chain": 2,
+      "storage-temperature": 2,
+      "capa": 1
+    },
+    "sources": [
+      "EML-005",
+      "ONB-001",
+      "TEAMS-COLDCHAIN",
+      "TEAMS-DEVIATIONS",
+      "TEAMS-NEWJOINERS",
+      "TEAMS-QAHELP"
+    ],
+    "evidence_count": 13
+  },
+  {
+    "name": "Arjun Menon",
+    "role": "Cold-Chain Supervisor",
+    "topics": {
+      "onboarding": 1,
+      "new-joiner": 1,
+      "deviation": 1,
+      "cold-chain": 8,
+      "storage-temperature": 7,
+      "equipment": 1
+    },
+    "sources": [
+      "EQP-001",
+      "ONB-001",
+      "SOP-014-v2",
+      "SOP-014-v3",
+      "TEAMS-COLDCHAIN"
+    ],
+    "evidence_count": 9
+  },
+  {
+    "name": "Vikram Shah",
+    "role": "Production Manager",
+    "topics": {
+      "audit": 1,
+      "deviation": 3,
+      "cold-chain": 4,
+      "equipment": 1,
+      "storage-temperature": 2,
+      "capa": 2
+    },
+    "sources": [
+      "AUD-001",
+      "EQP-001",
+      "TEAMS-COLDCHAIN",
+      "TEAMS-DEVIATIONS"
+    ],
+    "evidence_count": 6
+  },
+  {
+    "name": "Rahul Verma",
+    "role": "New QA joiner",
+    "topics": {
+      "onboarding": 5,
+      "new-joiner": 3,
+      "deviation": 3
+    },
+    "sources": [
+      "ONB-001",
+      "TEAMS-NEWJOINERS",
+      "TEAMS-QAHELP"
+    ],
+    "evidence_count": 5
+  },
+  {
+    "name": "Kavya Nair",
+    "role": "Regulatory Affairs Manager",
+    "topics": {
+      "regulatory": 2,
+      "data-integrity": 2
+    },
+    "sources": [
+      "REG-001"
+    ],
+    "evidence_count": 2
+  }
+]

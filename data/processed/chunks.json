@@ -1,0 +1,1037 @@
+[
+  {
+    "chunk_id": "AUD-001#001",
+    "doc_id": "AUD-001",
+    "text": "Audit Findings Summary Document ID: AUD-001 | Version: v1.0 | Date: 2025-11-20 | Author: Dr. Meera Iyer | Owner: Dr. Meera Iyer",
+    "source_type": "sharepoint",
+    "title": "Audit Findings Summary",
+    "version": "1.0",
+    "date": "2025-11-20",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "manager"
+    ],
+    "location": "section 1",
+    "topics": [
+      "audit",
+      "deviation",
+      "cold-chain"
+    ]
+  },
+  {
+    "chunk_id": "AUD-001#002",
+    "doc_id": "AUD-001",
+    "text": "Executive Summary This confidential report synthesizes observations from internal compliance assessments and external regulatory inspections completed during the fiscal year across Novacure Labs facilities. Dr. Meera Iyer, QA Head, issued this summary for management review.",
+    "source_type": "sharepoint",
+    "title": "Audit Findings Summary",
+    "version": "1.0",
+    "date": "2025-11-20",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "manager"
+    ],
+    "location": "section 2",
+    "topics": [
+      "audit",
+      "deviation",
+      "cold-chain"
+    ]
+  },
+  {
+    "chunk_id": "AUD-001#003",
+    "doc_id": "AUD-001",
+    "text": "Critical and Major Audit Observations The audit identified a recurring deviation: temperature excursions in cold-chain storage during Q2 and Q3. Multiple temperature fluctuations in warehouse refrigeration chambers exceeded permitted durations without prompt root-cause escalation.",
+    "source_type": "sharepoint",
+    "title": "Audit Findings Summary",
+    "version": "1.0",
+    "date": "2025-11-20",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "manager"
+    ],
+    "location": "section 3",
+    "topics": [
+      "audit",
+      "deviation",
+      "cold-chain"
+    ]
+  },
+  {
+    "chunk_id": "AUD-001#004",
+    "doc_id": "AUD-001",
+    "text": "Remediation and Corrective Mandate Priya Rao, QA Lead, owns deviation management and has been directed to coordinate an enterprise-wide review of cold storage alerts, revising operating procedures and implementing automated notification links between building management systems and the QMS.",
+    "source_type": "sharepoint",
+    "title": "Audit Findings Summary",
+    "version": "1.0",
+    "date": "2025-11-20",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "manager"
+    ],
+    "location": "section 4",
+    "topics": [
+      "audit",
+      "deviation",
+      "cold-chain"
+    ]
+  },
+  {
+    "chunk_id": "AUD-001#005",
+    "doc_id": "AUD-001",
+    "text": "Managerial Action Items Warehouse management under Vikram Shah and cold-chain leads must finalize physical insulation upgrades and complete CAPA verification before the upcoming regulatory audit.",
+    "source_type": "sharepoint",
+    "title": "Audit Findings Summary",
+    "version": "1.0",
+    "date": "2025-11-20",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "manager"
+    ],
+    "location": "section 5",
+    "topics": [
+      "audit",
+      "deviation",
+      "cold-chain"
+    ]
+  },
+  {
+    "chunk_id": "DI-001#001",
+    "doc_id": "DI-001",
+    "text": "Data Integrity Policy Document ID: DI-001 | Version: v1.2 | Date: 2025-02-14 | Author: Dr. Meera Iyer | Owner: Dr. Meera Iyer",
+    "source_type": "sharepoint",
+    "title": "Data Integrity Policy",
+    "version": "1.2",
+    "date": "2025-02-14",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "section 1",
+    "topics": [
+      "data-integrity",
+      "quality-system"
+    ]
+  },
+  {
+    "chunk_id": "DI-001#002",
+    "doc_id": "DI-001",
+    "text": "1. Policy Statement Novacure Labs strictly enforces data integrity principles across all computerized systems, laboratory instrumentation, paper records, and data archives. Truthful, contemporaneous, and uncompromised data is the core of our license to operate.",
+    "source_type": "sharepoint",
+    "title": "Data Integrity Policy",
+    "version": "1.2",
+    "date": "2025-02-14",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "section 2",
+    "topics": [
+      "data-integrity",
+      "quality-system"
+    ]
+  },
+  {
+    "chunk_id": "DI-001#003",
+    "doc_id": "DI-001",
+    "text": "2. ALCOA+ Principles All GxP data generated must be Attributable, Legible, Contemporaneous, Original, and Accurate. In addition, data must remain Complete, Consistent, Enduring, and Available throughout the record retention period.",
+    "source_type": "sharepoint",
+    "title": "Data Integrity Policy",
+    "version": "1.2",
+    "date": "2025-02-14",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "section 3",
+    "topics": [
+      "data-integrity",
+      "quality-system"
+    ]
+  },
+  {
+    "chunk_id": "DI-001#004",
+    "doc_id": "DI-001",
+    "text": "3. Electronic System Controls Computerized systems must feature role-based permissions, unique user credentials, and active automated audit trails. Shared generic passwords are categorically prohibited. Audit trail reviews must be executed prior to batch release.",
+    "source_type": "sharepoint",
+    "title": "Data Integrity Policy",
+    "version": "1.2",
+    "date": "2025-02-14",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "section 4",
+    "topics": [
+      "data-integrity",
+      "quality-system"
+    ]
+  },
+  {
+    "chunk_id": "DI-001#005",
+    "doc_id": "DI-001",
+    "text": "4. Enforcement and Governance Authored and authorized by Dr. Meera Iyer, QA Head. Any deliberate manipulation, backdating, deletion, or omission of GxP data constitutes gross misconduct and grounds for immediate dismissal and regulatory notification.",
+    "source_type": "sharepoint",
+    "title": "Data Integrity Policy",
+    "version": "1.2",
+    "date": "2025-02-14",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "section 5",
+    "topics": [
+      "data-integrity",
+      "quality-system"
+    ]
+  },
+  {
+    "chunk_id": "ONB-001#001",
+    "doc_id": "ONB-001",
+    "text": "New QA Hire Onboarding Guide Document ID: ONB-001 | Version: v2.0 | Date: 2025-08-01 | Author: Sana Khan | Owner: Sana Khan",
+    "source_type": "sharepoint",
+    "title": "New QA Hire Onboarding Guide",
+    "version": "2.0",
+    "date": "2025-08-01",
+    "author": "Sana Khan",
+    "owner": "Sana Khan",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "section 1",
+    "topics": [
+      "onboarding",
+      "new-joiner",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "ONB-001#002",
+    "doc_id": "ONB-001",
+    "text": "Welcome to Quality Assurance Welcome to Novacure Labs Quality Assurance department. As a new team member, you play a pivotal role in safeguarding medicine quality and patient welfare. Sana Khan has prepared this curriculum to guide your initial weeks.",
+    "source_type": "sharepoint",
+    "title": "New QA Hire Onboarding Guide",
+    "version": "2.0",
+    "date": "2025-08-01",
+    "author": "Sana Khan",
+    "owner": "Sana Khan",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "section 2",
+    "topics": [
+      "onboarding",
+      "new-joiner",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "ONB-001#003",
+    "doc_id": "ONB-001",
+    "text": "First Week Curriculum In your first week, read the Quality Manual, SOP-001, SOP-021 and the Data Integrity Policy. Complete the associated electronic reading acknowledgments in the learning management system before entering cleanroom suites.",
+    "source_type": "sharepoint",
+    "title": "New QA Hire Onboarding Guide",
+    "version": "2.0",
+    "date": "2025-08-01",
+    "author": "Sana Khan",
+    "owner": "Sana Khan",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "section 3",
+    "topics": [
+      "onboarding",
+      "new-joiner",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "ONB-001#004",
+    "doc_id": "ONB-001",
+    "text": "Department Contacts and Mentorship Priya Rao, QA Lead, owns deviation management. For operational deviation triage and investigation inquiries, reach out to Priya Rao. For cold-chain logistics questions, consult Arjun Menon.",
+    "source_type": "sharepoint",
+    "title": "New QA Hire Onboarding Guide",
+    "version": "2.0",
+    "date": "2025-08-01",
+    "author": "Sana Khan",
+    "owner": "Sana Khan",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "section 4",
+    "topics": [
+      "onboarding",
+      "new-joiner",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "ONB-001#005",
+    "doc_id": "ONB-001",
+    "text": "Training Milestones and Checkpoints By the end of your second week, you will shadow senior analysts on batch record review and observe a simulated deviation root-cause investigation. Welcome Rahul Verma and our incoming analyst cohort!",
+    "source_type": "sharepoint",
+    "title": "New QA Hire Onboarding Guide",
+    "version": "2.0",
+    "date": "2025-08-01",
+    "author": "Sana Khan",
+    "owner": "Sana Khan",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "section 5",
+    "topics": [
+      "onboarding",
+      "new-joiner",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "QM-001#001",
+    "doc_id": "QM-001",
+    "text": "Quality Manual Document ID: QM-001 | Version: v4.1 | Date: 2024-10-01 | Author: Dr. Meera Iyer | Owner: Dr. Meera Iyer",
+    "source_type": "sharepoint",
+    "title": "Quality Manual",
+    "version": "4.1",
+    "date": "2024-10-01",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "section 1",
+    "topics": [
+      "quality-system",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "QM-001#002",
+    "doc_id": "QM-001",
+    "text": "1. Corporate Quality Commitment Novacure Labs is dedicated to maintaining the highest standards of cGMP compliance, patient safety, and operational excellence across pharmaceutical manufacturing and testing operations.",
+    "source_type": "sharepoint",
+    "title": "Quality Manual",
+    "version": "4.1",
+    "date": "2024-10-01",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "section 2",
+    "topics": [
+      "quality-system",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "QM-001#003",
+    "doc_id": "QM-001",
+    "text": "2. Quality Governance Framework The Quality Assurance organization operates independently from production. Dr. Meera Iyer, QA Head, directs the executive quality committee. Priya Rao, QA Lead, owns deviation management and ensures operational compliance across all processing lines.",
+    "source_type": "sharepoint",
+    "title": "Quality Manual",
+    "version": "4.1",
+    "date": "2024-10-01",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "section 3",
+    "topics": [
+      "quality-system",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "QM-001#004",
+    "doc_id": "QM-001",
+    "text": "3. Deviation and Risk Management Quality risk management principles (ICH Q9) govern all deviation investigations, change controls, and CAPA systems. All operational personnel are required to flag potential compliance risks without delay.",
+    "source_type": "sharepoint",
+    "title": "Quality Manual",
+    "version": "4.1",
+    "date": "2024-10-01",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "section 4",
+    "topics": [
+      "quality-system",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "QM-001#005",
+    "doc_id": "QM-001",
+    "text": "4. Document Control Hierarchy The documentation pyramid consists of Level 1 Quality Manual, Level 2 Corporate Policies, Level 3 Standard Operating Procedures (SOPs), Level 4 Work Instructions, and Level 5 Batch Records and Forms.",
+    "source_type": "sharepoint",
+    "title": "Quality Manual",
+    "version": "4.1",
+    "date": "2024-10-01",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "section 5",
+    "topics": [
+      "quality-system",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "SOP-001#001",
+    "doc_id": "SOP-001",
+    "text": "SOP-001 Deviation Handling Document ID: SOP-001 | Version: v1.0 | Effective Date: 2025-01-15 | Author: Priya Rao 1. Purpose This Standard Operating Procedure establishes the mandatory process for identifying, documenting, triaging, and investigating deviations occurring during GMP manufacturing, packaging, testing, and storage operations at Novacure Labs. 2. Scope This procedure applies to all operational personnel, quality control analysts, warehouse operators, and validation engineers across all commercial and clinical production facilities at Novacure Labs. 3. Responsibilities Priya Rao, QA Lead, owns deviation management. The QA Lead is responsible for deviation classification, root-cause investigation approvals, and corrective action assignment. Department heads must ensure immediate reporting. 4. Procedure - Notification and Reporting Every deviation must be reported to QA within 24 hours of discovery. The reporting associate must execute immediate containment to prevent non-conforming product distribution and initiate an electronic deviation record in the QMS. 5. Procedure - Investigation and Root Cause For",
+    "source_type": "sop",
+    "title": "SOP-001 Deviation Handling",
+    "version": "1.0",
+    "date": "2025-01-15",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "page 1",
+    "topics": [
+      "deviation",
+      "quality-system"
+    ]
+  },
+  {
+    "chunk_id": "SOP-001#002",
+    "doc_id": "SOP-001",
+    "text": "non-conforming product distribution and initiate an electronic deviation record in the QMS. 5. Procedure - Investigation and Root Cause For critical and major deviations, a formal root-cause analysis must be conducted using Ishikawa fishbone diagrams or 5-Why methodology. The investigation must be completed and submitted for QA review within 30 calendar days. 6. Batch Disposition and Record Retention Batches implicated in open deviations cannot be released for commercial distribution until all root-cause evaluations are concluded and signed off by Quality Assurance leadership. All records must be retained for at least 10 years.",
+    "source_type": "sop",
+    "title": "SOP-001 Deviation Handling",
+    "version": "1.0",
+    "date": "2025-01-15",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "page 1",
+    "topics": [
+      "deviation",
+      "quality-system"
+    ]
+  },
+  {
+    "chunk_id": "SOP-014-v2#001",
+    "doc_id": "SOP-014-v2",
+    "text": "SOP-014 Cold-Chain Storage v2 Document ID: SOP-014-v2 | Version: v2.0 | Effective Date: 2024-11-05 | Author: Arjun Menon 1. Purpose This procedure specifies storage conditions, cold-chain handling, and temperature monitoring standards for refrigerated pharmaceutical stock and bulk biological intermediates at Novacure Labs. 2. Scope and Specifications Vaccine batches must be stored at 2 to 8 \u00b0C. Applies to primary cold storage warehouse chambers and inter-facility cold-chain transfers. Temperature must be checked and recorded manually twice daily. 3. Temperature Excursion Management Temperature excursions of up to 12 hours do not require a deviation report. If an excursion exceeds 12 hours or rises above 12 \u00b0C, warehouse supervisors must notify the facility operations team. 4. Handling and Packaging Cold boxes must be packed using certified gel packs conditioning between -2 \u00b0C and 0 \u00b0C prior to batch loading. Shipments must not exceed 48 hours transit duration without ice replenishment. 5. Author and",
+    "source_type": "sop",
+    "title": "SOP-014 Cold-Chain Storage v2",
+    "version": "2.0",
+    "date": "2024-11-05",
+    "author": "Arjun Menon",
+    "owner": "Arjun Menon",
+    "status": "superseded",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "page 1",
+    "topics": [
+      "cold-chain",
+      "storage-temperature"
+    ]
+  },
+  {
+    "chunk_id": "SOP-014-v2#002",
+    "doc_id": "SOP-014-v2",
+    "text": "0 \u00b0C prior to batch loading. Shipments must not exceed 48 hours transit duration without ice replenishment. 5. Author and Administrative Control Authored by Arjun Menon, Cold-Chain Supervisor, Novacure Labs. Superseded by version 3.0 following revised risk assessment.",
+    "source_type": "sop",
+    "title": "SOP-014 Cold-Chain Storage v2",
+    "version": "2.0",
+    "date": "2024-11-05",
+    "author": "Arjun Menon",
+    "owner": "Arjun Menon",
+    "status": "superseded",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "page 1",
+    "topics": [
+      "cold-chain",
+      "storage-temperature"
+    ]
+  },
+  {
+    "chunk_id": "SOP-014-v3#001",
+    "doc_id": "SOP-014-v3",
+    "text": "SOP-014 Cold-Chain Storage v3 Document ID: SOP-014-v3 | Version: v3.0 | Effective Date: 2025-06-20 | Author: Arjun Menon 1. Purpose This standard operating procedure sets mandatory storage limits, continuous telemetric monitoring, and quarantine rules for all temperature-sensitive vaccine products at Novacure Labs, superseding SOP-014-v2. 2. Cold-Chain Specifications Vaccine batches must be stored at 2 to 8 \u00b0C. Storage units must maintain calibrated NIST-traceable multi-point temperature sensors with real-time electronic alerting enabled 24/7. 3. Excursion Response Protocol Any temperature excursion longer than 4 hours requires a deviation report. Upon detecting a temperature excursion exceeding validated boundaries for more than 4 hours, stock must be segregated into quarantine immediately. 4. Quarantine and QA Escalation Physical quarantine cages and electronic warehouse holds must be applied instantly. The Cold-Chain Supervisor and QA Lead must initiate a deviation report within 24 hours pursuant to SOP-001. 5. Responsibilities and Author Control Authored by Arjun Menon, Cold-Chain",
+    "source_type": "sop",
+    "title": "SOP-014 Cold-Chain Storage v3",
+    "version": "3.0",
+    "date": "2025-06-20",
+    "author": "Arjun Menon",
+    "owner": "Arjun Menon",
+    "status": "current",
+    "supersedes": "SOP-014-v2",
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "page 1",
+    "topics": [
+      "cold-chain",
+      "storage-temperature"
+    ]
+  },
+  {
+    "chunk_id": "SOP-014-v3#002",
+    "doc_id": "SOP-014-v3",
+    "text": "initiate a deviation report within 24 hours pursuant to SOP-001. 5. Responsibilities and Author Control Authored by Arjun Menon, Cold-Chain Supervisor. Approved by Dr. Meera Iyer, QA Head. Replaces and supersedes SOP-014-v2 in its entirety.",
+    "source_type": "sop",
+    "title": "SOP-014 Cold-Chain Storage v3",
+    "version": "3.0",
+    "date": "2025-06-20",
+    "author": "Arjun Menon",
+    "owner": "Arjun Menon",
+    "status": "current",
+    "supersedes": "SOP-014-v2",
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "page 1",
+    "topics": [
+      "cold-chain",
+      "storage-temperature"
+    ]
+  },
+  {
+    "chunk_id": "SOP-021#001",
+    "doc_id": "SOP-021",
+    "text": "SOP-021 CAPA Management Document ID: SOP-021 | Version: v1.0 | Effective Date: 2025-03-10 | Author: Priya Rao 1. Purpose This procedure defines the requirements for initiating, evaluating, executing, and tracking Corrective and Preventive Actions (CAPA) at Novacure Labs. 2. Scope Encompasses quality issues resulting from confirmed OOS analytical findings, repeated deviations, internal audit findings, and regulatory audit observations. 3. Responsibilities Priya Rao, QA Lead, owns deviation management and provides oversight for CAPA system governance. Dr. Meera Iyer, QA Head, holds final approval authority for CAPA closure. 4. Timelines and Investigation A CAPA must be raised and the investigation completed within 15 working days of an OOS result being confirmed. The root-cause investigation must document verifiable containment and systemic remediation actions. 5. Effectiveness Review Each CAPA action plan must specify an effectiveness verification milestone typically scheduled 60 to 90 days post-implementation to guarantee defect recurrence is eliminated.",
+    "source_type": "sop",
+    "title": "SOP-021 CAPA Management",
+    "version": "1.0",
+    "date": "2025-03-10",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "page 1",
+    "topics": [
+      "capa",
+      "oos",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "EQP-001#001",
+    "doc_id": "EQP-001",
+    "text": "Cold Storage Unit Equipment Manual Document ID: EQP-001 | Version: v1.0 | Effective Date: 2024-09-01 | Author: Vikram Shah 1. Equipment Identification and Architecture This manual governs industrial refrigeration units Unit-CR-01 and Unit-CR-02 manufactured for Novacure Labs. Authored by Vikram Shah, Production Manager, with maintenance schedules validated by Arjun Menon. 2. Temperature Control Loop and Tuning The refrigeration system is engineered to maintain target storage at 2 to 8 \u00b0C using redundant dual-stage scroll compressors and variable speed fan coils. Temperature feedback is captured via calibrated Pt100 RTD sensors. 3. Preventive Maintenance Routines Monthly maintenance includes inspection of evaporator coils, compressor oil levels, door gasket seals, and validation of automatic generator backup switchover circuits. 4. Emergency Response and Failsafe Modes In the event of compressor malfunction, secondary refrigeration circuits engage automatically within 60 seconds. Alarm sirens and SMS alerts trigger if compartment temperatures drift outside validated boundaries.",
+    "source_type": "pdf",
+    "title": "Cold Storage Unit Equipment Manual",
+    "version": "1.0",
+    "date": "2024-09-01",
+    "author": "Vikram Shah",
+    "owner": "Vikram Shah",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "page 1",
+    "topics": [
+      "equipment",
+      "cold-chain"
+    ]
+  },
+  {
+    "chunk_id": "REG-001#001",
+    "doc_id": "REG-001",
+    "text": "Regulatory Guideline Summary Document ID: REG-001 | Version: v1.0 | Effective Date: 2025-05-12 | Author: Kavya Nair 1. Overview of Global Regulatory Expectations Regulatory health authorities including the FDA (21 CFR Part 11) and EMA (Annex 11) emphasize complete and verifiable traceability for all data used to demonstrate pharmaceutical safety, quality, and efficacy. Kavya Nair, Regulatory Affairs Manager, compiled this summary to support site compliance. 2. Statutory Audit Trail Obligations Audit trails must remain operational at all times without administrative bypass. Computer systems must log who created, modified, or deleted records, along with exact UTC timestamps and documented reasons for change. 3. Storage and Cold-Chain Validation Regulatory authorities require validated temperature mapping and monitoring systems. Temperature boundaries must be supported by stability profiles. Temperature controlled materials must be stored within validated limits such as 2 to 8 \u00b0C for refrigerated biological inventory. 4. Inspection Readiness Strategy Inspection readiness requires proactive",
+    "source_type": "pdf",
+    "title": "Regulatory Guideline Summary",
+    "version": "1.0",
+    "date": "2025-05-12",
+    "author": "Kavya Nair",
+    "owner": "Kavya Nair",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "page 1",
+    "topics": [
+      "regulatory",
+      "data-integrity"
+    ]
+  },
+  {
+    "chunk_id": "REG-001#002",
+    "doc_id": "REG-001",
+    "text": "validated limits such as 2 to 8 \u00b0C for refrigerated biological inventory. 4. Inspection Readiness Strategy Inspection readiness requires proactive self-inspection and contemporaneous record reviews. Facilities must demonstrate robust change control and rapid access to unadulterated source documents.",
+    "source_type": "pdf",
+    "title": "Regulatory Guideline Summary",
+    "version": "1.0",
+    "date": "2025-05-12",
+    "author": "Kavya Nair",
+    "owner": "Kavya Nair",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "page 1",
+    "topics": [
+      "regulatory",
+      "data-integrity"
+    ]
+  },
+  {
+    "chunk_id": "STB-001#001",
+    "doc_id": "STB-001",
+    "text": "Stability Study Report Document ID: STB-001 | Version: v1.0 | Effective Date: 2025-10-30 | Author: Dr. Meera Iyer 1. Study Objective and Experimental Design This stability report summarizes long-term and accelerated stability testing for commercial vaccine product lots manufactured at Novacure Labs. Dr. Meera Iyer, QA Head, supervised the study and approved the stability protocol. 2. Storage Conditions and Assay Results Long-term stability lots were maintained at 2 to 8 \u00b0C in qualified walk-in cold chambers over a 36-month monitoring period. Potency, pH, sterility, and aggregate levels met all pre-specified acceptance criteria across all evaluated time points. 3. Thermal Stress Challenge Analysis Accelerated excursion testing showed that vaccine potency remains within specification during temporary thermal stress events, provided total cumulative excursion duration does not exceed validated critical thresholds. 4. Conclusion and Shelf-Life Recommendation Based on real-time 36-month stability data, the commercial shelf life is confirmed as 24 months when stored",
+    "source_type": "pdf",
+    "title": "Stability Study Report",
+    "version": "1.0",
+    "date": "2025-10-30",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "page 1",
+    "topics": [
+      "stability",
+      "storage-temperature"
+    ]
+  },
+  {
+    "chunk_id": "STB-001#002",
+    "doc_id": "STB-001",
+    "text": "and Shelf-Life Recommendation Based on real-time 36-month stability data, the commercial shelf life is confirmed as 24 months when stored at 2 to 8 \u00b0C. Continued routine annual stability pull testing is mandated.",
+    "source_type": "pdf",
+    "title": "Stability Study Report",
+    "version": "1.0",
+    "date": "2025-10-30",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "page 1",
+    "topics": [
+      "stability",
+      "storage-temperature"
+    ]
+  },
+  {
+    "chunk_id": "EML-001#001",
+    "doc_id": "EML-001",
+    "text": "Subject: Storage temperature change (from QA Head) From: meera.iyer@novacure.com To: arjun.menon@novacure.com Date: Fri, 18 Sep 2026 09:30:00 +0000 Hi Arjun, Following preliminary stability review and feedback from our quality committee, we are introducing an immediate interim restriction on cold storage operations. Until SOP-014 is revised, store vaccine batches at 2 to 6 \u00b0C. Please adjust setpoints on warehouse refrigeration units Chiller-01 and Chiller-02 accordingly today, and instruct the warehouse team to monitor alerts within this narrower window. Regards, Dr. Meera Iyer QA Head, Novacure Labs",
+    "source_type": "email",
+    "title": "Storage temperature change (from QA Head)",
+    "version": null,
+    "date": "2026-09-18",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "email body",
+    "topics": [
+      "cold-chain",
+      "storage-temperature"
+    ]
+  },
+  {
+    "chunk_id": "EML-002#001",
+    "doc_id": "EML-002",
+    "text": "Subject: Deviation closure thread From: priya.rao@novacure.com To: sana.khan@novacure.com Date: Sun, 12 Apr 2026 14:15:00 +0000 Hi Sana, I have reviewed the investigation documentation for DEV-2026-088. The root-cause assessment meets our standards, and the containment actions were executed cleanly. As a reminder for the team, Priya Rao, QA Lead, owns deviation management and provides final QA sign-off for closure. Please submit the attached QA impact statement to the record so we can formally sign off before the end of the shift. Thanks, Priya Rao QA Lead, Novacure Labs",
+    "source_type": "email",
+    "title": "Deviation closure thread",
+    "version": null,
+    "date": "2026-04-12",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "email body",
+    "topics": [
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "EML-003#001",
+    "doc_id": "EML-003",
+    "text": "Subject: CAPA overdue reminder From: priya.rao@novacure.com To: vikram.shah@novacure.com Date: Fri, 08 May 2026 11:20:00 +0000 Vikram, This is an urgent reminder that CAPA-2026-042 (Packaging line sensor drift) has exceeded its target implementation deadline of 30 days. We need immediate resolution on the root cause and replacement sensor calibration. Priya Rao, QA Lead, owns deviation management. Any delays in CAPA execution create significant audit vulnerability for the site. Please provide the updated effectiveness check plan by Monday morning. Best, Priya Rao QA Lead, Novacure Labs",
+    "source_type": "email",
+    "title": "CAPA overdue reminder",
+    "version": null,
+    "date": "2026-05-08",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "email body",
+    "topics": [
+      "capa",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "EML-004#001",
+    "doc_id": "EML-004",
+    "text": "Subject: Audit prep From: meera.iyer@novacure.com To: priya.rao@novacure.com Date: Mon, 15 Jun 2026 16:45:00 +0000 Dear Priya, The regulatory agency has confirmed their site inspection for next month. Our priority during pre-audit preparations is to ensure all open deviations and CAPA files are thoroughly documented with robust rationales. Priya Rao, QA Lead, owns deviation management, so please lead the document readiness review for all open and recently closed deviation records. Prepare a summary table of repeat deviations over the last 12 months for executive review. Sincerely, Dr. Meera Iyer QA Head, Novacure Labs",
+    "source_type": "email",
+    "title": "Audit prep",
+    "version": null,
+    "date": "2026-06-15",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "manager"
+    ],
+    "location": "email body",
+    "topics": [
+      "audit",
+      "deviation"
+    ]
+  },
+  {
+    "chunk_id": "EML-005#001",
+    "doc_id": "EML-005",
+    "text": "Subject: New joiner welcome From: meera.iyer@novacure.com To: rahul.verma@novacure.com Date: Wed, 01 Jul 2026 09:00:00 +0000 Dear Rahul, Welcome to Novacure Labs! We are delighted to have you join our Quality Assurance organization. Your training schedule has been organized in coordination with Sana Khan and your team mentors. Please review the onboarding materials on SharePoint and familiarize yourself with our site quality policies and operating procedures. Feel free to reach out to any of the team if you need guidance. Warm regards, Dr. Meera Iyer QA Head, Novacure Labs",
+    "source_type": "email",
+    "title": "New joiner welcome",
+    "version": null,
+    "date": "2026-07-01",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "email body",
+    "topics": [
+      "onboarding",
+      "new-joiner"
+    ]
+  },
+  {
+    "chunk_id": "TEAMS-COLDCHAIN#001",
+    "doc_id": "TEAMS-COLDCHAIN",
+    "text": "[Arjun Menon 2026-09-19T08:15:00Z]: Morning team. Please check the datalogger readings on Chiller-01 before start of shift.\n[Dr. Meera Iyer 2026-09-19T08:22:00Z]: Arjun, did you see my email regarding the storage band adjustment?\n[Arjun Menon 2026-09-19T08:30:00Z]: Yes Dr. Iyer. I am updating the setpoints on the control panel right now.\n[Arjun Menon 2026-09-19T08:45:00Z]: Per Dr. Meera Iyer, hold vaccine batches at 2 to 6 \u00b0C until SOP-014 is revised.",
+    "source_type": "teams",
+    "title": "#cold-chain",
+    "version": null,
+    "date": "2026-09-19",
+    "author": "Arjun Menon",
+    "owner": "Arjun Menon",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "msg 1-4",
+    "topics": [
+      "cold-chain",
+      "storage-temperature"
+    ]
+  },
+  {
+    "chunk_id": "TEAMS-COLDCHAIN#002",
+    "doc_id": "TEAMS-COLDCHAIN",
+    "text": "[Sana Khan 2026-09-19T09:10:00Z]: Got it Arjun. Has the building automation alarm threshold been updated as well?\n[Arjun Menon 2026-09-19T09:18:00Z]: Yes, high alarm warning is now configured at 6.1 \u00b0C on both units.\n[Vikram Shah 2026-09-20T10:05:00Z]: Are we ready to stage batch VAC-2026-902 for packaging?\n[Arjun Menon 2026-09-20T10:14:00Z]: Temp logs over the last 24 hours show stable 3.8 \u00b0C. Clear for transfer.",
+    "source_type": "teams",
+    "title": "#cold-chain",
+    "version": null,
+    "date": "2026-09-19",
+    "author": "Arjun Menon",
+    "owner": "Arjun Menon",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "msg 5-8",
+    "topics": [
+      "cold-chain",
+      "storage-temperature"
+    ]
+  },
+  {
+    "chunk_id": "TEAMS-COLDCHAIN#003",
+    "doc_id": "TEAMS-COLDCHAIN",
+    "text": "[Sana Khan 2026-09-21T11:30:00Z]: Double check the probe calibration certificate before signing the transfer sheet.\n[Arjun Menon 2026-09-21T11:42:00Z]: Calibration is valid through December 2026.\n[Vikram Shah 2026-09-22T08:00:00Z]: Backup compressor routine test scheduled for 14:00 today.\n[Arjun Menon 2026-09-22T08:25:00Z]: Confirmed, I will monitor temperature telemetry throughout the switchover.",
+    "source_type": "teams",
+    "title": "#cold-chain",
+    "version": null,
+    "date": "2026-09-19",
+    "author": "Arjun Menon",
+    "owner": "Arjun Menon",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "msg 9-12",
+    "topics": [
+      "cold-chain",
+      "storage-temperature"
+    ]
+  },
+  {
+    "chunk_id": "TEAMS-DEVIATIONS#001",
+    "doc_id": "TEAMS-DEVIATIONS",
+    "text": "[Vikram Shah 2026-08-15T08:30:00Z]: Priya, we had a pressure drop alarm on sterile filling suite B at 04:15 this morning.\n[Priya Rao 2026-08-15T08:38:00Z]: Priya Rao, QA Lead, owns deviation management.\n[Priya Rao 2026-08-15T08:42:00Z]: Was sterile filling actively underway when the differential pressure dropped?\n[Vikram Shah 2026-08-15T08:49:00Z]: No, line was in cleaning and sanitation mode between batch runs.\n[Priya Rao 2026-08-15T08:55:00Z]: Good. Log it as a minor deviation under DEV-2026-114 and attach the BMS pressure trace.",
+    "source_type": "teams",
+    "title": "#deviations",
+    "version": null,
+    "date": "2026-08-15",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "msg 1-5",
+    "topics": [
+      "deviation",
+      "capa"
+    ]
+  },
+  {
+    "chunk_id": "TEAMS-DEVIATIONS#002",
+    "doc_id": "TEAMS-DEVIATIONS",
+    "text": "[Sana Khan 2026-08-15T09:12:00Z]: I can assist Vikram with the environmental monitoring swab data collection.\n[Vikram Shah 2026-08-15T09:30:00Z]: Thanks Sana. I will have the swab plates pulled and sent to micro lab.\n[Priya Rao 2026-08-15T10:00:00Z]: Ensure the 24-hour clock rule in SOP-001 is respected for initial logging.\n[Vikram Shah 2026-08-15T10:15:00Z]: Deviation form submitted in QMS just now.\n[Priya Rao 2026-08-15T11:00:00Z]: Acknowledged. I will review and set the containment action items.",
+    "source_type": "teams",
+    "title": "#deviations",
+    "version": null,
+    "date": "2026-08-15",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "location": "msg 6-10",
+    "topics": [
+      "deviation",
+      "capa"
+    ]
+  },
+  {
+    "chunk_id": "TEAMS-NEWJOINERS#001",
+    "doc_id": "TEAMS-NEWJOINERS",
+    "text": "[Sana Khan 2026-07-05T09:00:00Z]: Welcome everyone to the new joiners chat channel! Feel free to ask any onboarding questions here.\n[Rahul Verma 2026-07-05T09:15:00Z]: Hi Sana! Thanks for setting this up. How do I get badge access to the QC testing wing?\n[Sana Khan 2026-07-05T09:25:00Z]: You will need to complete the gowning qualification module in LMS first, then security will activate your badge.\n[Rahul Verma 2026-07-05T09:40:00Z]: Great, working through the online training modules right now.\n[Sana Khan 2026-07-05T10:05:00Z]: Also check the onboarding checklist in ONB-001 on SharePoint for week 1 priorities.",
+    "source_type": "teams",
+    "title": "#new-joiners",
+    "version": null,
+    "date": "2026-07-05",
+    "author": "Sana Khan",
+    "owner": "Sana Khan",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "msg 1-5",
+    "topics": [
+      "onboarding",
+      "new-joiner"
+    ]
+  },
+  {
+    "chunk_id": "TEAMS-NEWJOINERS#002",
+    "doc_id": "TEAMS-NEWJOINERS",
+    "text": "[Rahul Verma 2026-07-05T10:30:00Z]: Yes, I am reading through the Quality Manual and SOP-001 today.\n[Sana Khan 2026-07-05T11:15:00Z]: Let me know if you want to grab lunch around 12:30 with the QA analysts.\n[Rahul Verma 2026-07-05T11:20:00Z]: Sounds great! See you at 12:30 in the cafeteria.\n[Sana Khan 2026-07-05T14:00:00Z]: Remember to log your reading completion signatures in the training tracker.\n[Rahul Verma 2026-07-05T14:10:00Z]: All signed and submitted for day 1!",
+    "source_type": "teams",
+    "title": "#new-joiners",
+    "version": null,
+    "date": "2026-07-05",
+    "author": "Sana Khan",
+    "owner": "Sana Khan",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "msg 6-10",
+    "topics": [
+      "onboarding",
+      "new-joiner"
+    ]
+  },
+  {
+    "chunk_id": "TEAMS-QAHELP#001",
+    "doc_id": "TEAMS-QAHELP",
+    "text": "[Rahul Verma 2026-08-10T09:05:00Z]: Hello everyone! Quick question: where can I find the initial deviation reporting template?\n[Sana Khan 2026-08-10T09:12:00Z]: Welcome Rahul! It is located in the QMS electronic portal under Form-DEV-01.\n[Rahul Verma 2026-08-10T09:18:00Z]: Thanks Sana! Who should I assign as the primary QA reviewer when submitting?\n[Priya Rao 2026-08-10T09:25:00Z]: Priya Rao, QA Lead, owns deviation management.\n[Priya Rao 2026-08-10T09:28:00Z]: Assign it to me in the QMS workflow and I will review the triage classification.",
+    "source_type": "teams",
+    "title": "#qa-help",
+    "version": null,
+    "date": "2026-08-10",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "msg 1-5",
+    "topics": [
+      "deviation",
+      "onboarding"
+    ]
+  },
+  {
+    "chunk_id": "TEAMS-QAHELP#002",
+    "doc_id": "TEAMS-QAHELP",
+    "text": "[Rahul Verma 2026-08-10T09:35:00Z]: Understood Priya, will do. Appreciate the guidance!\n[Sana Khan 2026-08-10T10:00:00Z]: Make sure you include the lot number and exact location timestamp in section 1.\n[Rahul Verma 2026-08-10T10:15:00Z]: Got it, filling out the details now.\n[Priya Rao 2026-08-10T11:00:00Z]: Also check SOP-001 for classification guidelines if you are uncertain whether it is minor or major.\n[Rahul Verma 2026-08-10T11:10:00Z]: Reading SOP-001 right now. Very clear!",
+    "source_type": "teams",
+    "title": "#qa-help",
+    "version": null,
+    "date": "2026-08-10",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "location": "msg 6-10",
+    "topics": [
+      "deviation",
+      "onboarding"
+    ]
+  }
+]

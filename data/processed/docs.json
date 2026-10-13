@@ -1,0 +1,429 @@
+[
+  {
+    "doc_id": "AUD-001",
+    "title": "Audit Findings Summary",
+    "source_type": "sharepoint",
+    "version": "1.0",
+    "date": "2025-11-20",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "manager"
+    ],
+    "topics": [
+      "audit",
+      "deviation",
+      "cold-chain"
+    ],
+    "word_count": 155,
+    "file": "sharepoint\\AUD-001.docx"
+  },
+  {
+    "doc_id": "DI-001",
+    "title": "Data Integrity Policy",
+    "source_type": "sharepoint",
+    "version": "1.2",
+    "date": "2025-02-14",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "data-integrity",
+      "quality-system"
+    ],
+    "word_count": 154,
+    "file": "sharepoint\\DI-001.docx"
+  },
+  {
+    "doc_id": "ONB-001",
+    "title": "New QA Hire Onboarding Guide",
+    "source_type": "sharepoint",
+    "version": "2.0",
+    "date": "2025-08-01",
+    "author": "Sana Khan",
+    "owner": "Sana Khan",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "onboarding",
+      "new-joiner",
+      "deviation"
+    ],
+    "word_count": 159,
+    "file": "sharepoint\\ONB-001.docx"
+  },
+  {
+    "doc_id": "QM-001",
+    "title": "Quality Manual",
+    "source_type": "sharepoint",
+    "version": "4.1",
+    "date": "2024-10-01",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "quality-system",
+      "deviation"
+    ],
+    "word_count": 151,
+    "file": "sharepoint\\QM-001.docx"
+  },
+  {
+    "doc_id": "SOP-001",
+    "title": "SOP-001 Deviation Handling",
+    "source_type": "sop",
+    "version": "1.0",
+    "date": "2025-01-15",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "deviation",
+      "quality-system"
+    ],
+    "word_count": 242,
+    "file": "sop\\SOP-001.pdf"
+  },
+  {
+    "doc_id": "SOP-014-v2",
+    "title": "SOP-014 Cold-Chain Storage v2",
+    "source_type": "sop",
+    "version": "2.0",
+    "date": "2024-11-05",
+    "author": "Arjun Menon",
+    "owner": "Arjun Menon",
+    "status": "superseded",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "cold-chain",
+      "storage-temperature"
+    ],
+    "word_count": 188,
+    "file": "sop\\SOP-014-v2.pdf"
+  },
+  {
+    "doc_id": "SOP-014-v3",
+    "title": "SOP-014 Cold-Chain Storage v3",
+    "source_type": "sop",
+    "version": "3.0",
+    "date": "2025-06-20",
+    "author": "Arjun Menon",
+    "owner": "Arjun Menon",
+    "status": "current",
+    "supersedes": "SOP-014-v2",
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "cold-chain",
+      "storage-temperature"
+    ],
+    "word_count": 185,
+    "file": "sop\\SOP-014-v3.pdf"
+  },
+  {
+    "doc_id": "SOP-021",
+    "title": "SOP-021 CAPA Management",
+    "source_type": "sop",
+    "version": "1.0",
+    "date": "2025-03-10",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "capa",
+      "oos",
+      "deviation"
+    ],
+    "word_count": 146,
+    "file": "sop\\SOP-021.pdf"
+  },
+  {
+    "doc_id": "EQP-001",
+    "title": "Cold Storage Unit Equipment Manual",
+    "source_type": "pdf",
+    "version": "1.0",
+    "date": "2024-09-01",
+    "author": "Vikram Shah",
+    "owner": "Vikram Shah",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "equipment",
+      "cold-chain"
+    ],
+    "word_count": 147,
+    "file": "pdf\\EQP-001.pdf"
+  },
+  {
+    "doc_id": "REG-001",
+    "title": "Regulatory Guideline Summary",
+    "source_type": "pdf",
+    "version": "1.0",
+    "date": "2025-05-12",
+    "author": "Kavya Nair",
+    "owner": "Kavya Nair",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "regulatory",
+      "data-integrity"
+    ],
+    "word_count": 188,
+    "file": "pdf\\REG-001.pdf"
+  },
+  {
+    "doc_id": "STB-001",
+    "title": "Stability Study Report",
+    "source_type": "pdf",
+    "version": "1.0",
+    "date": "2025-10-30",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "stability",
+      "storage-temperature"
+    ],
+    "word_count": 183,
+    "file": "pdf\\STB-001.pdf"
+  },
+  {
+    "doc_id": "EML-001",
+    "title": "Storage temperature change (from QA Head)",
+    "source_type": "email",
+    "version": null,
+    "date": "2026-09-18",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "cold-chain",
+      "storage-temperature"
+    ],
+    "word_count": 85,
+    "file": "email\\EML-001.eml"
+  },
+  {
+    "doc_id": "EML-002",
+    "title": "Deviation closure thread",
+    "source_type": "email",
+    "version": null,
+    "date": "2026-04-12",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "deviation"
+    ],
+    "word_count": 87,
+    "file": "email\\EML-002.eml"
+  },
+  {
+    "doc_id": "EML-003",
+    "title": "CAPA overdue reminder",
+    "source_type": "email",
+    "version": null,
+    "date": "2026-05-08",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "capa",
+      "deviation"
+    ],
+    "word_count": 84,
+    "file": "email\\EML-003.eml"
+  },
+  {
+    "doc_id": "EML-004",
+    "title": "Audit prep",
+    "source_type": "email",
+    "version": null,
+    "date": "2026-06-15",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "manager"
+    ],
+    "topics": [
+      "audit",
+      "deviation"
+    ],
+    "word_count": 92,
+    "file": "email\\EML-004.eml"
+  },
+  {
+    "doc_id": "EML-005",
+    "title": "New joiner welcome",
+    "source_type": "email",
+    "version": null,
+    "date": "2026-07-01",
+    "author": "Dr. Meera Iyer",
+    "owner": "Dr. Meera Iyer",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "onboarding",
+      "new-joiner"
+    ],
+    "word_count": 88,
+    "file": "email\\EML-005.eml"
+  },
+  {
+    "doc_id": "TEAMS-COLDCHAIN",
+    "title": "#cold-chain",
+    "source_type": "teams",
+    "version": null,
+    "date": "2026-09-19",
+    "author": "Arjun Menon",
+    "owner": "Arjun Menon",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "cold-chain",
+      "storage-temperature"
+    ],
+    "word_count": 174,
+    "file": "teams\\TEAMS-COLDCHAIN.json"
+  },
+  {
+    "doc_id": "TEAMS-DEVIATIONS",
+    "title": "#deviations",
+    "source_type": "teams",
+    "version": null,
+    "date": "2026-08-15",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "deviation",
+      "capa"
+    ],
+    "word_count": 143,
+    "file": "teams\\TEAMS-DEVIATIONS.json"
+  },
+  {
+    "doc_id": "TEAMS-NEWJOINERS",
+    "title": "#new-joiners",
+    "source_type": "teams",
+    "version": null,
+    "date": "2026-07-05",
+    "author": "Sana Khan",
+    "owner": "Sana Khan",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "onboarding",
+      "new-joiner"
+    ],
+    "word_count": 157,
+    "file": "teams\\TEAMS-NEWJOINERS.json"
+  },
+  {
+    "doc_id": "TEAMS-QAHELP",
+    "title": "#qa-help",
+    "source_type": "teams",
+    "version": null,
+    "date": "2026-08-10",
+    "author": "Priya Rao",
+    "owner": "Priya Rao",
+    "status": "current",
+    "supersedes": null,
+    "allowed_roles": [
+      "intern",
+      "analyst",
+      "manager"
+    ],
+    "topics": [
+      "deviation",
+      "onboarding"
+    ],
+    "word_count": 140,
+    "file": "teams\\TEAMS-QAHELP.json"
+  }
+]
