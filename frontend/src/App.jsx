@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRole } from './context/RoleContext';
 import * as api from './api';
+import Login from './components/Login';
 import Chat from './components/Chat';
 import Onboarding from './components/Onboarding';
 import Experts from './components/Experts';
@@ -13,7 +14,7 @@ const ROLE_DESCRIPTIONS = {
 };
 
 export default function App() {
-  const { role, setRole } = useRole();
+  const { role, user, logout } = useRole();
   const [activeTab, setActiveTab] = useState('chat'); // 'chat' | 'onboarding-experts' | 'dashboard'
   const [oeSubTab, setOeSubTab] = useState('onboarding'); // 'onboarding' | 'experts'
   const [health, setHealth] = useState(null);
@@ -45,6 +46,11 @@ export default function App() {
       clearInterval(interval);
     };
   }, []);
+
+  // If no user is logged in, show the Login screen
+  if (!user) {
+    return <Login />;
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
@@ -78,7 +84,7 @@ export default function App() {
               </p>
             </div>
 
-            {/* Role Switcher & Health Indicator */}
+            {/* User Profile Chip & Health Indicator */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
               {/* Health Dot */}
               <div className="flex items-center gap-2 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs">
@@ -90,22 +96,39 @@ export default function App() {
                 </span>
               </div>
 
-              {/* Role Toggle */}
-              <div className="flex items-center rounded-xl bg-slate-100 dark:bg-slate-800 p-1 border border-slate-200 dark:border-slate-700">
-                {['intern', 'analyst', 'manager'].map((r) => (
-                  <button
-                    key={r}
-                    type="button"
-                    onClick={() => setRole(r)}
-                    className={`px-3 py-1 text-xs font-semibold rounded-lg capitalize transition ${
-                      role === r
-                        ? 'bg-white dark:bg-indigo-600 text-slate-900 dark:text-white shadow-sm'
-                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                    }`}
-                  >
-                    {r}
-                  </button>
-                ))}
+              {/* User Profile Chip & Switch User Button */}
+              <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                  <div className="w-7 h-7 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs font-bold">
+                    {user.name.charAt(0)}
+                  </div>
+                  <div className="text-left">
+                    <div className="text-xs font-bold text-slate-900 dark:text-white leading-tight">
+                      {user.name}
+                    </div>
+                    <div className="text-[10px] text-slate-500 dark:text-slate-400 leading-tight">
+                      {user.title}
+                    </div>
+                  </div>
+                  <span className={`ml-1 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full border ${
+                    role === 'intern'
+                      ? 'bg-sky-100 text-sky-800 border-sky-300 dark:bg-sky-950/60 dark:text-sky-300 dark:border-sky-800'
+                      : role === 'analyst'
+                      ? 'bg-indigo-100 text-indigo-800 border-indigo-300 dark:bg-indigo-950/60 dark:text-indigo-300 dark:border-indigo-800'
+                      : 'bg-purple-100 text-purple-800 border-purple-300 dark:bg-purple-950/60 dark:text-purple-300 dark:border-purple-800'
+                  }`}>
+                    {role}
+                  </span>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={logout}
+                  className="px-3 py-1.5 text-xs font-medium rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition"
+                  title="Sign out and return to login screen"
+                >
+                  Switch user
+                </button>
               </div>
             </div>
           </div>
@@ -157,7 +180,7 @@ export default function App() {
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto pb-16">
         {activeTab === 'chat' && (
-          <Chat key={`chat-${role}`} />
+          <Chat key={`chat-${role}-${user.id}`} />
         )}
 
         {activeTab === 'onboarding-experts' && (
@@ -187,15 +210,15 @@ export default function App() {
             </div>
 
             {oeSubTab === 'onboarding' ? (
-              <Onboarding key={`onboarding-${role}`} />
+              <Onboarding key={`onboarding-${role}-${user.id}`} />
             ) : (
-              <Experts key={`experts-${role}`} />
+              <Experts key={`experts-${role}-${user.id}`} />
             )}
           </div>
         )}
 
         {activeTab === 'dashboard' && (
-          <Dashboard key={`dashboard-${role}`} />
+          <Dashboard key={`dashboard-${role}-${user.id}`} />
         )}
       </main>
 
@@ -206,7 +229,7 @@ export default function App() {
             Provenance Enterprise Knowledge Assistant · Novacure Labs
           </p>
           <p className="text-[11px] text-slate-400 dark:text-slate-500">
-            * Note: Minutes saved is an estimate based on average literature search times. In this demo, role is chosen via the UI header; in production, role permissions are securely synchronized from enterprise SSO group claims.
+            * Note: Minutes saved is an estimate based on average literature search times. In this demo, role is chosen via demo login; in production, role permissions are securely synchronized from enterprise SSO group claims.
           </p>
         </div>
       </footer>
