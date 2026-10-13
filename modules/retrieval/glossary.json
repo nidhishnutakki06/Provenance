@@ -1,0 +1,178 @@
+{
+  "CAPA": {
+    "expansion": "Corrective and Preventive Action",
+    "also": ["deviation", "investigation", "remediation", "root cause", "corrective action", "preventive action"]
+  },
+  "OOS": {
+    "expansion": "Out of Specification",
+    "also": ["out-of-spec", "discrepancy", "analytical discrepancy", "test failure", "lab failure", "specification"]
+  },
+  "OOT": {
+    "expansion": "Out of Trend",
+    "also": ["trend analysis", "statistical drift", "variance", "drift", "abnormal trend"]
+  },
+  "GMP": {
+    "expansion": "Good Manufacturing Practice",
+    "also": ["cGMP", "manufacturing standard", "compliance", "quality system", "pharma production"]
+  },
+  "GDP": {
+    "expansion": "Good Distribution Practice",
+    "also": ["distribution", "transport", "logistics", "supply chain", "cold chain", "wholesaling"]
+  },
+  "SOP": {
+    "expansion": "Standard Operating Procedure",
+    "also": ["procedure", "protocol", "work instruction", "operating procedure", "guideline"]
+  },
+  "BMR": {
+    "expansion": "Batch Manufacturing Record",
+    "also": ["batch record", "lot record", "manufacturing record", "master formula", "production log"]
+  },
+  "QA": {
+    "expansion": "Quality Assurance",
+    "also": ["quality", "compliance", "oversight", "audit", "governance", "QA Lead", "QA Head"]
+  },
+  "QC": {
+    "expansion": "Quality Control",
+    "also": ["testing", "laboratory", "analytical testing", "inspection", "assay"]
+  },
+  "deviation": {
+    "expansion": "Manufacturing Deviation / Quality Anomaly",
+    "also": ["anomaly", "incident", "non-conformance", "unplanned event", "variance", "exception"]
+  },
+  "change control": {
+    "expansion": "Quality Change Control Procedure",
+    "also": ["CC", "change procedure", "facility modification", "revision", "change request"]
+  },
+  "cold chain": {
+    "expansion": "Cold-Chain Temperature Controlled Storage and Transport",
+    "also": ["vaccine", "storage", "refrigerated", "cold storage", "2 to 8", "temperature", "freezer", "chiller"]
+  },
+  "excursion": {
+    "expansion": "Temperature Excursion Out of Permitted Range",
+    "also": ["temperature", "out of range", "hours", "variance", "limit breach", "cold chain excursion"]
+  },
+  "ALCOA": {
+    "expansion": "Attributable, Legible, Contemporaneous, Original, Accurate",
+    "also": ["data integrity", "documentation", "audit trail", "ALCOA+", "good documentation practice"]
+  },
+  "stability": {
+    "expansion": "Pharmaceutical Stability Testing",
+    "also": ["shelf life", "degradation", "expiry", "storage condition", "accelerated testing"]
+  },
+  "batch record": {
+    "expansion": "Batch Record / Master Batch Production Record",
+    "also": ["BMR", "BPR", "batch release", "manufacturing log", "lot history", "batch documentation"]
+  },
+  "HPLC": {
+    "expansion": "High-Performance Liquid Chromatography",
+    "also": ["chromatography", "column", "calibration", "analytical assay", "separation"]
+  },
+  "API": {
+    "expansion": "Active Pharmaceutical Ingredient",
+    "also": ["drug substance", "active ingredient", "raw material", "compound"]
+  },
+  "CoA": {
+    "expansion": "Certificate of Analysis",
+    "also": ["release certificate", "analytical certificate", "specification compliance", "batch release"]
+  },
+  "DQ": {
+    "expansion": "Design Qualification",
+    "also": ["equipment qualification", "engineering design", "design specification", "validation"]
+  },
+  "IQ": {
+    "expansion": "Installation Qualification",
+    "also": ["equipment installation", "installation check", "commissioning", "hardware qualification"]
+  },
+  "OQ": {
+    "expansion": "Operational Qualification",
+    "also": ["operational verification", "equipment testing", "operating parameters", "functional test"]
+  },
+  "PQ": {
+    "expansion": "Performance Qualification",
+    "also": ["process performance", "equipment performance", "routine operation", "load test"]
+  },
+  "LIMS": {
+    "expansion": "Laboratory Information Management System",
+    "also": ["lab software", "sample tracking", "analytical data", "electronic data"]
+  },
+  "CPP": {
+    "expansion": "Critical Process Parameter",
+    "also": ["process control", "critical parameter", "temperature", "pressure", "agitation speed"]
+  },
+  "CQA": {
+    "expansion": "Critical Quality Attribute",
+    "also": ["quality attribute", "potency", "purity", "sterility", "dissolution"]
+  },
+  "IPC": {
+    "expansion": "In-Process Control",
+    "also": ["in-process testing", "line check", "intermediate testing", "sampling"]
+  },
+  "HVAC": {
+    "expansion": "Heating, Ventilation, and Air Conditioning",
+    "also": ["air handling", "cleanroom", "differential pressure", "air filtration", "climate control"]
+  },
+  "HEPA": {
+    "expansion": "High-Efficiency Particulate Air Filter",
+    "also": ["air filter", "cleanroom filter", "particulate control", "laminar flow"]
+  },
+  "WFI": {
+    "expansion": "Water for Injection",
+    "also": ["purified water", "pharmaceutical water", "pyrogen-free", "distillation"]
+  },
+  "CIP": {
+    "expansion": "Clean-in-Place",
+    "also": ["automated cleaning", "vessel washing", "cleaning validation", "sanitization"]
+  },
+  "SIP": {
+    "expansion": "Sterilize-in-Place",
+    "also": ["steam sterilization", "in-line sterilization", "thermal sanitization", "autoclave"]
+  },
+  "PAI": {
+    "expansion": "Pre-Approval Inspection",
+    "also": ["regulatory inspection", "FDA audit", "agency inspection", "site inspection"]
+  },
+  "CFR": {
+    "expansion": "Code of Federal Regulations",
+    "also": ["FDA regulation", "21 CFR Part 211", "21 CFR Part 11", "federal rule"]
+  },
+  "EMA": {
+    "expansion": "European Medicines Agency",
+    "also": ["EU regulatory authority", "European regulation", "guideline", "health authority"]
+  },
+  "FDA": {
+    "expansion": "Food and Drug Administration",
+    "also": ["US health authority", "regulatory agency", "CDER", "inspectorate"]
+  },
+  "VMP": {
+    "expansion": "Validation Master Plan",
+    "also": ["validation strategy", "qualification plan", "master validation", "lifecycle"]
+  },
+  "URS": {
+    "expansion": "User Requirements Specification",
+    "also": ["user requirements", "equipment requirements", "system specification"]
+  },
+  "FAT": {
+    "expansion": "Factory Acceptance Testing",
+    "also": ["vendor testing", "factory test", "pre-delivery test"]
+  },
+  "SAT": {
+    "expansion": "Site Acceptance Testing",
+    "also": ["on-site testing", "facility acceptance", "commissioning test"]
+  },
+  "SME": {
+    "expansion": "Subject Matter Expert",
+    "also": ["process expert", "technical specialist", "domain expert", "system owner"]
+  },
+  "NC": {
+    "expansion": "Non-Conformance",
+    "also": ["non-compliance", "deviation", "discrepancy", "out-of-compliance"]
+  },
+  "audit": {
+    "expansion": "Quality and Regulatory Compliance Audit",
+    "also": ["inspection", "internal audit", "recurring deviation", "findings", "compliance review"]
+  },
+  "onboarding": {
+    "expansion": "Employee Onboarding and Training",
+    "also": ["new hire", "first week", "training", "reading list", "mentor"]
+  }
+}
