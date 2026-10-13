@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pydantic>=2
+python-dotenv
+groq
+rank_bm25
+pypdf
+python-docx
+reportlab
+requests
+httpx
