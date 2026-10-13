@@ -1,0 +1,62 @@
+[
+  {
+    "msg_id": 1,
+    "author": "Rahul Verma",
+    "timestamp": "2026-08-10T09:05:00Z",
+    "text": "Hello everyone! Quick question: where can I find the initial deviation reporting template?"
+  },
+  {
+    "msg_id": 2,
+    "author": "Sana Khan",
+    "timestamp": "2026-08-10T09:12:00Z",
+    "text": "Welcome Rahul! It is located in the QMS electronic portal under Form-DEV-01."
+  },
+  {
+    "msg_id": 3,
+    "author": "Rahul Verma",
+    "timestamp": "2026-08-10T09:18:00Z",
+    "text": "Thanks Sana! Who should I assign as the primary QA reviewer when submitting?"
+  },
+  {
+    "msg_id": 4,
+    "author": "Priya Rao",
+    "timestamp": "2026-08-10T09:25:00Z",
+    "text": "Priya Rao, QA Lead, owns deviation management."
+  },
+  {
+    "msg_id": 5,
+    "author": "Priya Rao",
+    "timestamp": "2026-08-10T09:28:00Z",
+    "text": "Assign it to me in the QMS workflow and I will review the triage classification."
+  },
+  {
+    "msg_id": 6,
+    "author": "Rahul Verma",
+    "timestamp": "2026-08-10T09:35:00Z",
+    "text": "Understood Priya, will do. Appreciate the guidance!"
+  },
+  {
+    "msg_id": 7,
+    "author": "Sana Khan",
+    "timestamp": "2026-08-10T10:00:00Z",
+    "text": "Make sure you include the lot number and exact location timestamp in section 1."
+  },
+  {
+    "msg_id": 8,
+    "author": "Rahul Verma",
+    "timestamp": "2026-08-10T10:15:00Z",
+    "text": "Got it, filling out the details now."
+  },
+  {
+    "msg_id": 9,
+    "author": "Priya Rao",
+    "timestamp": "2026-08-10T11:00:00Z",
+    "text": "Also check SOP-001 for classification guidelines if you are uncertain whether it is minor or major."
+  },
+  {
+    "msg_id": 10,
+    "author": "Rahul Verma",
+    "timestamp": "2026-08-10T11:10:00Z",
+    "text": "Reading SOP-001 right now. Very clear!"
+  }
+]

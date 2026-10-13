@@ -1,0 +1,20 @@
+{
+  "doc_id": "SOP-021",
+  "title": "SOP-021 CAPA Management",
+  "source_type": "sop",
+  "version": "1.0",
+  "date": "2025-03-10",
+  "author": "Priya Rao",
+  "owner": "Priya Rao",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "capa",
+    "oos",
+    "deviation"
+  ]
+}

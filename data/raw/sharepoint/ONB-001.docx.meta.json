@@ -1,0 +1,21 @@
+{
+  "doc_id": "ONB-001",
+  "title": "New QA Hire Onboarding Guide",
+  "source_type": "sharepoint",
+  "version": "2.0",
+  "date": "2025-08-01",
+  "author": "Sana Khan",
+  "owner": "Sana Khan",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "intern",
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "onboarding",
+    "new-joiner",
+    "deviation"
+  ]
+}

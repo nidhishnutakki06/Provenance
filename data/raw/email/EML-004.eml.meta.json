@@ -1,0 +1,18 @@
+{
+  "doc_id": "EML-004",
+  "title": "Audit prep",
+  "source_type": "email",
+  "version": null,
+  "date": "2026-06-15",
+  "author": "Dr. Meera Iyer",
+  "owner": "Dr. Meera Iyer",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "manager"
+  ],
+  "topics": [
+    "audit",
+    "deviation"
+  ]
+}

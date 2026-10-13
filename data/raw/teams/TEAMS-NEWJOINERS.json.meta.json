@@ -1,0 +1,20 @@
+{
+  "doc_id": "TEAMS-NEWJOINERS",
+  "title": "#new-joiners",
+  "source_type": "teams",
+  "version": null,
+  "date": "2026-07-05",
+  "author": "Sana Khan",
+  "owner": "Sana Khan",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "intern",
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "onboarding",
+    "new-joiner"
+  ]
+}

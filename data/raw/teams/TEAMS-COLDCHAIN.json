@@ -1,0 +1,74 @@
+[
+  {
+    "msg_id": 1,
+    "author": "Arjun Menon",
+    "timestamp": "2026-09-19T08:15:00Z",
+    "text": "Morning team. Please check the datalogger readings on Chiller-01 before start of shift."
+  },
+  {
+    "msg_id": 2,
+    "author": "Dr. Meera Iyer",
+    "timestamp": "2026-09-19T08:22:00Z",
+    "text": "Arjun, did you see my email regarding the storage band adjustment?"
+  },
+  {
+    "msg_id": 3,
+    "author": "Arjun Menon",
+    "timestamp": "2026-09-19T08:30:00Z",
+    "text": "Yes Dr. Iyer. I am updating the setpoints on the control panel right now."
+  },
+  {
+    "msg_id": 4,
+    "author": "Arjun Menon",
+    "timestamp": "2026-09-19T08:45:00Z",
+    "text": "Per Dr. Meera Iyer, hold vaccine batches at 2 to 6 °C until SOP-014 is revised."
+  },
+  {
+    "msg_id": 5,
+    "author": "Sana Khan",
+    "timestamp": "2026-09-19T09:10:00Z",
+    "text": "Got it Arjun. Has the building automation alarm threshold been updated as well?"
+  },
+  {
+    "msg_id": 6,
+    "author": "Arjun Menon",
+    "timestamp": "2026-09-19T09:18:00Z",
+    "text": "Yes, high alarm warning is now configured at 6.1 °C on both units."
+  },
+  {
+    "msg_id": 7,
+    "author": "Vikram Shah",
+    "timestamp": "2026-09-20T10:05:00Z",
+    "text": "Are we ready to stage batch VAC-2026-902 for packaging?"
+  },
+  {
+    "msg_id": 8,
+    "author": "Arjun Menon",
+    "timestamp": "2026-09-20T10:14:00Z",
+    "text": "Temp logs over the last 24 hours show stable 3.8 °C. Clear for transfer."
+  },
+  {
+    "msg_id": 9,
+    "author": "Sana Khan",
+    "timestamp": "2026-09-21T11:30:00Z",
+    "text": "Double check the probe calibration certificate before signing the transfer sheet."
+  },
+  {
+    "msg_id": 10,
+    "author": "Arjun Menon",
+    "timestamp": "2026-09-21T11:42:00Z",
+    "text": "Calibration is valid through December 2026."
+  },
+  {
+    "msg_id": 11,
+    "author": "Vikram Shah",
+    "timestamp": "2026-09-22T08:00:00Z",
+    "text": "Backup compressor routine test scheduled for 14:00 today."
+  },
+  {
+    "msg_id": 12,
+    "author": "Arjun Menon",
+    "timestamp": "2026-09-22T08:25:00Z",
+    "text": "Confirmed, I will monitor temperature telemetry throughout the switchover."
+  }
+]

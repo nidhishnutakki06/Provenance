@@ -1,0 +1,19 @@
+{
+  "doc_id": "STB-001",
+  "title": "Stability Study Report",
+  "source_type": "pdf",
+  "version": "1.0",
+  "date": "2025-10-30",
+  "author": "Dr. Meera Iyer",
+  "owner": "Dr. Meera Iyer",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "stability",
+    "storage-temperature"
+  ]
+}

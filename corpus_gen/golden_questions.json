@@ -1,0 +1,133 @@
+[
+  {
+    "id": "G1",
+    "question": "What temperature should vaccine batches be stored at?",
+    "role": "analyst",
+    "expected_behavior": "conflict",
+    "expected_docs": [
+      "SOP-014-v3",
+      "EML-001",
+      "TEAMS-COLDCHAIN",
+      "SOP-014-v2"
+    ],
+    "must_not_cite": []
+  },
+  {
+    "id": "G2",
+    "question": "What temperature should vaccine batches be stored at?",
+    "role": "intern",
+    "expected_behavior": "answer",
+    "expected_docs": [
+      "SOP-014-v3"
+    ],
+    "must_not_cite": [
+      "EML-001",
+      "TEAMS-COLDCHAIN",
+      "SOP-014-v2"
+    ]
+  },
+  {
+    "id": "G3",
+    "question": "What temperature should vaccine batches be stored at?",
+    "role": "manager",
+    "expected_behavior": "conflict",
+    "expected_docs": [
+      "SOP-014-v3",
+      "EML-001",
+      "TEAMS-COLDCHAIN",
+      "SOP-014-v2"
+    ],
+    "must_not_cite": []
+  },
+  {
+    "id": "G4",
+    "question": "What is the CAPA timeline for an OOS result?",
+    "role": "analyst",
+    "expected_behavior": "answer",
+    "expected_docs": [
+      "SOP-021"
+    ],
+    "must_not_cite": []
+  },
+  {
+    "id": "G5",
+    "question": "What is the CAPA timeline for an OOS result?",
+    "role": "intern",
+    "expected_behavior": "refuse",
+    "expected_docs": [],
+    "must_not_cite": [
+      "SOP-021"
+    ]
+  },
+  {
+    "id": "G6",
+    "question": "What recurring deviation did the audit find?",
+    "role": "intern",
+    "expected_behavior": "refuse",
+    "expected_docs": [],
+    "must_not_cite": [
+      "AUD-001",
+      "EML-004"
+    ]
+  },
+  {
+    "id": "G7",
+    "question": "What recurring deviation did the audit find?",
+    "role": "manager",
+    "expected_behavior": "answer",
+    "expected_docs": [
+      "AUD-001"
+    ],
+    "must_not_cite": []
+  },
+  {
+    "id": "G8",
+    "question": "How do I calibrate an HPLC column?",
+    "role": "analyst",
+    "expected_behavior": "unanswerable",
+    "expected_docs": [],
+    "must_not_cite": []
+  },
+  {
+    "id": "G9",
+    "question": "Who knows about deviation handling?",
+    "role": "analyst",
+    "expected_behavior": "answer",
+    "expected_docs": [
+      "SOP-001",
+      "TEAMS-DEVIATIONS"
+    ],
+    "must_not_cite": []
+  },
+  {
+    "id": "G10",
+    "question": "How do I report a deviation?",
+    "role": "intern",
+    "expected_behavior": "answer",
+    "expected_docs": [
+      "SOP-001"
+    ],
+    "must_not_cite": []
+  },
+  {
+    "id": "G11",
+    "question": "What should I read in my first week as a new QA hire?",
+    "role": "analyst",
+    "expected_behavior": "answer",
+    "expected_docs": [
+      "ONB-001"
+    ],
+    "must_not_cite": []
+  },
+  {
+    "id": "G12",
+    "question": "What happens if a temperature excursion occurs in cold storage?",
+    "role": "analyst",
+    "expected_behavior": "answer",
+    "expected_docs": [
+      "SOP-014-v3",
+      "SOP-014-v2"
+    ],
+    "must_not_cite": []
+  }
+]

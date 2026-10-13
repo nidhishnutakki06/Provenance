@@ -1,0 +1,22 @@
+From: priya.rao@novacure.com
+To: sana.khan@novacure.com
+Subject: Deviation closure thread
+Date: Sun, 12 Apr 2026 14:15:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Sana,
+
+I have reviewed the investigation documentation for DEV-2026-088. The root-ca=
+use assessment meets our standards, and the containment actions were executed=
+ cleanly.
+
+As a reminder for the team, Priya Rao, QA Lead, owns deviation management and=
+ provides final QA sign-off for closure. Please submit the attached QA impact=
+ statement to the record so we can formally sign off before the end of the sh=
+ift.
+
+Thanks,
+Priya Rao
+QA Lead, Novacure Labs

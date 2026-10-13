@@ -1,0 +1,23 @@
+From: meera.iyer@novacure.com
+To: arjun.menon@novacure.com
+Subject: Storage temperature change (from QA Head)
+Date: Fri, 18 Sep 2026 09:30:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Arjun,
+
+Following preliminary stability review and feedback from our quality committe=
+e, we are introducing an immediate interim restriction on cold storage operat=
+ions.
+
+Until SOP-014 is revised, store vaccine batches at 2 to 6 =C2=B0C.
+
+Please adjust setpoints on warehouse refrigeration units Chiller-01 and Chill=
+er-02 accordingly today, and instruct the warehouse team to monitor alerts wi=
+thin this narrower window.
+
+Regards,
+Dr. Meera Iyer
+QA Head, Novacure Labs

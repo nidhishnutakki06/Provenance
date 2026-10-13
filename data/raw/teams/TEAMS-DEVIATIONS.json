@@ -1,0 +1,62 @@
+[
+  {
+    "msg_id": 1,
+    "author": "Vikram Shah",
+    "timestamp": "2026-08-15T08:30:00Z",
+    "text": "Priya, we had a pressure drop alarm on sterile filling suite B at 04:15 this morning."
+  },
+  {
+    "msg_id": 2,
+    "author": "Priya Rao",
+    "timestamp": "2026-08-15T08:38:00Z",
+    "text": "Priya Rao, QA Lead, owns deviation management."
+  },
+  {
+    "msg_id": 3,
+    "author": "Priya Rao",
+    "timestamp": "2026-08-15T08:42:00Z",
+    "text": "Was sterile filling actively underway when the differential pressure dropped?"
+  },
+  {
+    "msg_id": 4,
+    "author": "Vikram Shah",
+    "timestamp": "2026-08-15T08:49:00Z",
+    "text": "No, line was in cleaning and sanitation mode between batch runs."
+  },
+  {
+    "msg_id": 5,
+    "author": "Priya Rao",
+    "timestamp": "2026-08-15T08:55:00Z",
+    "text": "Good. Log it as a minor deviation under DEV-2026-114 and attach the BMS pressure trace."
+  },
+  {
+    "msg_id": 6,
+    "author": "Sana Khan",
+    "timestamp": "2026-08-15T09:12:00Z",
+    "text": "I can assist Vikram with the environmental monitoring swab data collection."
+  },
+  {
+    "msg_id": 7,
+    "author": "Vikram Shah",
+    "timestamp": "2026-08-15T09:30:00Z",
+    "text": "Thanks Sana. I will have the swab plates pulled and sent to micro lab."
+  },
+  {
+    "msg_id": 8,
+    "author": "Priya Rao",
+    "timestamp": "2026-08-15T10:00:00Z",
+    "text": "Ensure the 24-hour clock rule in SOP-001 is respected for initial logging."
+  },
+  {
+    "msg_id": 9,
+    "author": "Vikram Shah",
+    "timestamp": "2026-08-15T10:15:00Z",
+    "text": "Deviation form submitted in QMS just now."
+  },
+  {
+    "msg_id": 10,
+    "author": "Priya Rao",
+    "timestamp": "2026-08-15T11:00:00Z",
+    "text": "Acknowledged. I will review and set the containment action items."
+  }
+]

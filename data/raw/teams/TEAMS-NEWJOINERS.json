@@ -1,0 +1,62 @@
+[
+  {
+    "msg_id": 1,
+    "author": "Sana Khan",
+    "timestamp": "2026-07-05T09:00:00Z",
+    "text": "Welcome everyone to the new joiners chat channel! Feel free to ask any onboarding questions here."
+  },
+  {
+    "msg_id": 2,
+    "author": "Rahul Verma",
+    "timestamp": "2026-07-05T09:15:00Z",
+    "text": "Hi Sana! Thanks for setting this up. How do I get badge access to the QC testing wing?"
+  },
+  {
+    "msg_id": 3,
+    "author": "Sana Khan",
+    "timestamp": "2026-07-05T09:25:00Z",
+    "text": "You will need to complete the gowning qualification module in LMS first, then security will activate your badge."
+  },
+  {
+    "msg_id": 4,
+    "author": "Rahul Verma",
+    "timestamp": "2026-07-05T09:40:00Z",
+    "text": "Great, working through the online training modules right now."
+  },
+  {
+    "msg_id": 5,
+    "author": "Sana Khan",
+    "timestamp": "2026-07-05T10:05:00Z",
+    "text": "Also check the onboarding checklist in ONB-001 on SharePoint for week 1 priorities."
+  },
+  {
+    "msg_id": 6,
+    "author": "Rahul Verma",
+    "timestamp": "2026-07-05T10:30:00Z",
+    "text": "Yes, I am reading through the Quality Manual and SOP-001 today."
+  },
+  {
+    "msg_id": 7,
+    "author": "Sana Khan",
+    "timestamp": "2026-07-05T11:15:00Z",
+    "text": "Let me know if you want to grab lunch around 12:30 with the QA analysts."
+  },
+  {
+    "msg_id": 8,
+    "author": "Rahul Verma",
+    "timestamp": "2026-07-05T11:20:00Z",
+    "text": "Sounds great! See you at 12:30 in the cafeteria."
+  },
+  {
+    "msg_id": 9,
+    "author": "Sana Khan",
+    "timestamp": "2026-07-05T14:00:00Z",
+    "text": "Remember to log your reading completion signatures in the training tracker."
+  },
+  {
+    "msg_id": 10,
+    "author": "Rahul Verma",
+    "timestamp": "2026-07-05T14:10:00Z",
+    "text": "All signed and submitted for day 1!"
+  }
+]

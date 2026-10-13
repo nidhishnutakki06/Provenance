@@ -1,0 +1,20 @@
+{
+  "doc_id": "EML-005",
+  "title": "New joiner welcome",
+  "source_type": "email",
+  "version": null,
+  "date": "2026-07-01",
+  "author": "Dr. Meera Iyer",
+  "owner": "Dr. Meera Iyer",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "intern",
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "onboarding",
+    "new-joiner"
+  ]
+}
