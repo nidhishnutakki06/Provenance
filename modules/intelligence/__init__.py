@@ -1,17 +1,10 @@
 from contracts import AskRequest, AskResponse, Chunk, Conflict, GapItem, Stats
+from modules.intelligence.conflicts import detect_conflicts
+from modules.intelligence.gaps import log_query, gap_report, get_stats
 
-
-def detect_conflicts(chunks: list[Chunk]) -> list[Conflict]:
-    return []
-
-
-def log_query(req: AskRequest, resp: AskResponse) -> None:
-    return None
-
-
-def gap_report() -> list[GapItem]:
-    return [GapItem(question='How do I calibrate an HPLC column?', asked_count=1, last_asked='2026-10-13', reason='No source found')]
-
-
-def get_stats() -> Stats:
-    return Stats()
+__all__ = [
+    'detect_conflicts',
+    'log_query',
+    'gap_report',
+    'get_stats',
+]
