@@ -1,0 +1,26 @@
+[
+  {
+    "msg_id": 1,
+    "author": "Rahul Verma",
+    "timestamp": "2026-09-20T10:00:00Z",
+    "text": "Hi everyone, I have a quick question about deviation log forms for new joiners."
+  },
+  {
+    "msg_id": 2,
+    "author": "Sana Khan",
+    "timestamp": "2026-09-20T10:05:00Z",
+    "text": "Check SOP-001 Section 1 for the 24-hour reporting requirement."
+  },
+  {
+    "msg_id": 3,
+    "author": "Priya Rao",
+    "timestamp": "2026-09-20T10:10:00Z",
+    "text": "Priya Rao, QA Lead, owns deviation management. Rahul, ping me directly if you need form QA-DEV-01."
+  },
+  {
+    "msg_id": 4,
+    "author": "Rahul Verma",
+    "timestamp": "2026-09-20T10:12:00Z",
+    "text": "Thank you Priya, will review the onboarding guide and SOP-001 now."
+  }
+]

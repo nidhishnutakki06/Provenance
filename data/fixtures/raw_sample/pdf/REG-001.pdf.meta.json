@@ -1,0 +1,19 @@
+{
+  "doc_id": "REG-001",
+  "title": "Regulatory Guideline Summary",
+  "source_type": "pdf",
+  "version": "1.0",
+  "date": "2025-02-01",
+  "author": "Kavya Nair",
+  "owner": "Kavya Nair",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "regulatory",
+    "data-integrity"
+  ]
+}

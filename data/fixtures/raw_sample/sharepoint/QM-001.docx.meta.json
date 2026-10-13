@@ -1,0 +1,20 @@
+{
+  "doc_id": "QM-001",
+  "title": "Quality Manual",
+  "source_type": "sharepoint",
+  "version": "4.1",
+  "date": "2025-01-10",
+  "author": "Dr. Meera Iyer",
+  "owner": "Dr. Meera Iyer",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "intern",
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "quality-system",
+    "deviation"
+  ]
+}

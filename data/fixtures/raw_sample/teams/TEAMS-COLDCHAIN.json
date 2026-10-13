@@ -1,0 +1,32 @@
+[
+  {
+    "msg_id": 1,
+    "author": "Arjun Menon",
+    "timestamp": "2026-09-19T08:15:00Z",
+    "text": "Morning team. Heads up regarding the cold-chain warehouse temperature setpoints."
+  },
+  {
+    "msg_id": 2,
+    "author": "Arjun Menon",
+    "timestamp": "2026-09-19T08:16:30Z",
+    "text": "Per Dr. Meera Iyer, hold vaccine batches at 2 to 6 \u00b0C until SOP-014 is revised."
+  },
+  {
+    "msg_id": 3,
+    "author": "Sana Khan",
+    "timestamp": "2026-09-19T08:20:00Z",
+    "text": "Understood Arjun. Has the deviation logging threshold also changed?"
+  },
+  {
+    "msg_id": 4,
+    "author": "Arjun Menon",
+    "timestamp": "2026-09-19T08:25:00Z",
+    "text": "SOP-014-v3 still governs deviation reporting for excursions over 4 hours. Keep Priya Rao updated on any variance."
+  },
+  {
+    "msg_id": 5,
+    "author": "Priya Rao",
+    "timestamp": "2026-09-19T08:30:00Z",
+    "text": "Priya Rao here. Any deviation logged against 2 to 6 \u00b0C should reference Dr. Meera Iyer's memo."
+  }
+]

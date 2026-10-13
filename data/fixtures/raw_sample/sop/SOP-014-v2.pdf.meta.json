@@ -1,0 +1,19 @@
+{
+  "doc_id": "SOP-014-v2",
+  "title": "SOP-014 Cold-Chain Storage v2",
+  "source_type": "sop",
+  "version": "2.0",
+  "date": "2024-11-05",
+  "author": "Arjun Menon",
+  "owner": "Arjun Menon",
+  "status": "superseded",
+  "supersedes": null,
+  "allowed_roles": [
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "cold-chain",
+    "storage-temperature"
+  ]
+}

@@ -1,14 +1,31 @@
-from contracts import Expert, OnboardingPath, ReadingItem, Role
+"""Modules Ingestion package for Provenance.
 
+Exports:
+- build_corpus() -> None
+- find_experts(topic: str, role: Role) -> list[Expert]
+- onboarding_path(job_role: str, role: Role) -> OnboardingPath
+"""
 
-def build_corpus() -> None:
-    return None
+from __future__ import annotations
 
+from contracts import Expert, OnboardingPath, Role
+from modules.ingestion.builder import build, build_corpus
+from modules.ingestion.connectors import (
+    EmailConnector,
+    SharePointConnector,
+    SopConnector,
+    TeamsConnector,
+)
+from modules.ingestion.experts import find_experts
+from modules.ingestion.onboarding import onboarding_path
 
-def find_experts(topic: str, role: Role) -> list[Expert]:
-    return [Expert(name='Priya Rao', role='QA Lead', evidence_count=9, topics=['deviation'], sample_source='SOP-001 Deviation Handling')]
-
-
-def onboarding_path(job_role: str, role: Role) -> OnboardingPath:
-    item = ReadingItem(order=1, doc_id='QM-001', title='Quality Manual', why='Start here for the quality system overview', est_minutes=20)
-    return OnboardingPath(job_role=job_role, days={'Day 1': [item]})
+__all__ = [
+    "build_corpus",
+    "find_experts",
+    "onboarding_path",
+    "build",
+    "SharePointConnector",
+    "SopConnector",
+    "EmailConnector",
+    "TeamsConnector",
+]

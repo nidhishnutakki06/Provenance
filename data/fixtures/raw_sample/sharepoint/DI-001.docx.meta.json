@@ -1,0 +1,19 @@
+{
+  "doc_id": "DI-001",
+  "title": "Data Integrity Policy",
+  "source_type": "sharepoint",
+  "version": "1.2",
+  "date": "2025-01-20",
+  "author": "Kavya Nair",
+  "owner": "Kavya Nair",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "data-integrity",
+    "quality-system"
+  ]
+}

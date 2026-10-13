@@ -1,0 +1,19 @@
+{
+  "doc_id": "STB-001",
+  "title": "Stability Study Report",
+  "source_type": "pdf",
+  "version": "1.0",
+  "date": "2025-03-30",
+  "author": "Vikram Shah",
+  "owner": "Vikram Shah",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "stability",
+    "storage-temperature"
+  ]
+}
