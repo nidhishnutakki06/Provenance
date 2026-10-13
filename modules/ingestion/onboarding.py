@@ -10,11 +10,9 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
-from typing import Optional
 
 from contracts import OnboardingPath, ReadingItem, Role
 import app.config as config
-from modules.ingestion.connectors import load_sidecar
 
 # Hardcoded ordered doc_id lists from Section 6 and Dev 2 spec
 JOB_ROLE_PATHS: dict[str, list[str]] = {
@@ -40,128 +38,36 @@ WHY_TEMPLATES: dict[str, str] = {
     "audit": "Summary of audit observations and compliance remediation commitments.",
 }
 
-# Section 6.2 fallback catalogue in case corpus is partially indexed
-DOC_CATALOGUE: dict[str, dict] = {
-    "ONB-001": {
-        "title": "New QA Hire Onboarding Guide",
-        "allowed_roles": ["intern", "analyst", "manager"],
-        "status": "current",
-        "topics": ["onboarding", "new-joiner", "deviation"],
-        "word_count": 550,
-    },
-    "QM-001": {
-        "title": "Quality Manual",
-        "allowed_roles": ["intern", "analyst", "manager"],
-        "status": "current",
-        "topics": ["quality-system", "deviation"],
-        "word_count": 1200,
-    },
-    "SOP-001": {
-        "title": "SOP-001 Deviation Handling",
-        "allowed_roles": ["intern", "analyst", "manager"],
-        "status": "current",
-        "topics": ["deviation", "quality-system"],
-        "word_count": 800,
-    },
-    "DI-001": {
-        "title": "Data Integrity Policy",
-        "allowed_roles": ["analyst", "manager"],
-        "status": "current",
-        "topics": ["data-integrity", "quality-system"],
-        "word_count": 950,
-    },
-    "SOP-021": {
-        "title": "SOP-021 CAPA Management",
-        "allowed_roles": ["analyst", "manager"],
-        "status": "current",
-        "topics": ["capa", "oos", "deviation"],
-        "word_count": 1100,
-    },
-    "SOP-014-v3": {
-        "title": "SOP-014 Cold-Chain Storage v3",
-        "allowed_roles": ["intern", "analyst", "manager"],
-        "status": "current",
-        "topics": ["cold-chain", "storage-temperature"],
-        "word_count": 850,
-    },
-    "EQP-001": {
-        "title": "Cold Storage Unit Equipment Manual",
-        "allowed_roles": ["analyst", "manager"],
-        "status": "current",
-        "topics": ["equipment", "cold-chain"],
-        "word_count": 1400,
-    },
-    "STB-001": {
-        "title": "Stability Study Report",
-        "allowed_roles": ["analyst", "manager"],
-        "status": "current",
-        "topics": ["stability", "storage-temperature"],
-        "word_count": 1050,
-    },
-    "REG-001": {
-        "title": "Regulatory Guideline Summary",
-        "allowed_roles": ["analyst", "manager"],
-        "status": "current",
-        "topics": ["regulatory", "data-integrity"],
-        "word_count": 900,
-    },
-    "AUD-001": {
-        "title": "Audit Findings Summary",
-        "allowed_roles": ["manager"],
-        "status": "current",
-        "topics": ["audit", "deviation", "cold-chain"],
-        "word_count": 750,
-    },
-    "SOP-014-v2": {
-        "title": "SOP-014 Cold-Chain Storage v2",
-        "allowed_roles": ["analyst", "manager"],
-        "status": "superseded",
-        "topics": ["cold-chain", "storage-temperature"],
-        "word_count": 800,
-    },
-}
-
 
 def load_doc_records() -> dict[str, dict]:
-    """Load document records from processed docs.json, falling back to sidecars and catalogue."""
-    records: dict[str, dict] = {}
-
+    """Load document records from processed docs.json when present, or derive from get_all_chunks()."""
     docs_file = config.PROCESSED_DIR / "docs.json"
     if docs_file.exists():
         try:
             with open(docs_file, "r", encoding="utf-8") as f:
                 items = json.load(f)
-                for item in items:
-                    records[item["doc_id"]] = item
-            return records
+                return {item["doc_id"]: item for item in items}
         except Exception as e:
             sys.stderr.write(f"Warning reading {docs_file}: {e}\n")
 
-    # Inspect sidecars in raw_dir()
-    raw_dir = config.raw_dir()
-    if raw_dir.is_dir():
-        for meta_file in raw_dir.rglob("*.meta.json"):
-            try:
-                with open(meta_file, "r", encoding="utf-8") as f:
-                    meta = json.load(f)
-                    doc_id = meta.get("doc_id")
-                    if doc_id:
-                        records[doc_id] = {
-                            "doc_id": doc_id,
-                            "title": meta.get("title", doc_id),
-                            "allowed_roles": meta.get("allowed_roles", []),
-                            "status": meta.get("status", "current"),
-                            "topics": meta.get("topics", []),
-                            "word_count": DOC_CATALOGUE.get(doc_id, {}).get("word_count", 800),
-                        }
-            except Exception as e:
-                sys.stderr.write(f"Error reading sidecar {meta_file}: {e}\n")
+    # Fallback: derive records from chunks
+    from modules.ingestion.experts import get_all_chunks
 
-    # Merge catalogue fallbacks
-    for doc_id, data in DOC_CATALOGUE.items():
-        if doc_id not in records:
-            records[doc_id] = {"doc_id": doc_id, **data}
-
+    chunks = get_all_chunks()
+    records: dict[str, dict] = {}
+    for c in chunks:
+        words = len(c.text.split())
+        if c.doc_id not in records:
+            records[c.doc_id] = {
+                "doc_id": c.doc_id,
+                "title": c.title,
+                "allowed_roles": c.allowed_roles,
+                "status": c.status,
+                "topics": c.topics,
+                "word_count": words,
+            }
+        else:
+            records[c.doc_id]["word_count"] += words
     return records
 
 
@@ -247,7 +153,7 @@ def onboarding_path(job_role: str, role: Role) -> OnboardingPath:
         for item in remaining:
             if day_num > 5:
                 # Any extra append to Day 5
-                days[f"Day 5"].append(item)
+                days["Day 5"].append(item)
             else:
                 days[f"Day {day_num}"] = [item]
                 day_num += 1

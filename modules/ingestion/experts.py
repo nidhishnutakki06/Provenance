@@ -8,6 +8,7 @@ Enforces role-based security: evidence is only counted in chunks viewable by the
 from __future__ import annotations
 
 import json
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -50,7 +51,7 @@ TOPIC_VOCABULARY = [
     "new-joiner",
 ]
 
-# Topic normalization synonyms/keywords
+# Topic normalization synonyms/keywords ("ich" removed from regulatory)
 TOPIC_SYNONYMS: dict[str, list[str]] = {
     "deviation": ["deviation", "deviations", "deviation handling", "variance", "incident"],
     "capa": ["capa", "corrective action", "preventive action", "corrective and preventive"],
@@ -62,32 +63,34 @@ TOPIC_SYNONYMS: dict[str, list[str]] = {
     "data-integrity": ["data-integrity", "data integrity", "alcoa", "21 cfr"],
     "stability": ["stability", "shelf life", "shelf-life", "degradation"],
     "equipment": ["equipment", "freezer", "refrigerator", "unit manual"],
-    "regulatory": ["regulatory", "ich", "health authority", "guideline"],
+    "regulatory": ["regulatory", "health authority", "guideline"],
     "quality-system": ["quality-system", "quality system", "quality manual", "gmp", "cgmp"],
     "new-joiner": ["new-joiner", "new joiner", "new joiners"],
 }
 
 
 def normalize_topic(query_topic: str) -> str:
-    """Normalize a free-text topic string to the Section 5.5 vocabulary."""
+    """Normalize a free-text topic string to the Section 5.5 vocabulary.
+
+    - Keeps exact vocabulary match first.
+    - Matches a synonym only when it appears in the query as a whole word or phrase,
+      using regex (?<![a-z0-9])<escaped synonym>(?![a-z0-9]).
+    - No reverse substring testing.
+    """
     if not query_topic:
         return ""
     q = query_topic.strip().lower()
 
-    # Exact vocabulary match
+    # Exact vocabulary match first
     if q in TOPIC_VOCABULARY:
         return q
 
-    # Check synonyms
+    # Match synonym as whole word/phrase only
     for canon_topic, synonyms in TOPIC_SYNONYMS.items():
         for syn in synonyms:
-            if syn in q or q in syn:
+            pattern = rf"(?<![a-z0-9]){re.escape(syn.lower())}(?![a-z0-9])"
+            if re.search(pattern, q):
                 return canon_topic
-
-    # Substring check against vocabulary
-    for vocab in TOPIC_VOCABULARY:
-        if vocab.replace("-", " ") in q or vocab in q:
-            return vocab
 
     return ""
 
@@ -117,7 +120,8 @@ def find_experts(topic: str, role: Role) -> list[Expert]:
     """Find up to 3 domain experts for a topic filtered by the requesting role.
 
     - Normalizes the topic to Section 5.5 vocabulary.
-    - Counts evidence ONLY in chunks the given role may see.
+    - Counts evidence per DISTINCT DOCUMENT, not per chunk.
+    - Sorts with key (-len(docs), -chunk_count, name ascending).
     - Priya Rao ranks first for every role on 'deviation'.
     - Never raises on bad input.
     """
@@ -130,80 +134,82 @@ def find_experts(topic: str, role: Role) -> list[Expert]:
         # Filter strictly by user role first (security rule 8)
         role_chunks = [c for c in chunks if role in c.allowed_roles]
 
-        # Track evidence per person:
-        # person -> {count: int, doc_counts: dict[title, count], topic_counts: dict[topic, count]}
-        person_evidence: dict[str, dict] = defaultdict(
-            lambda: {"count": 0, "doc_counts": defaultdict(int), "topic_counts": defaultdict(int)}
-        )
+        person_matching_docs: dict[str, set[str]] = defaultdict(set)
+        person_chunk_counts: dict[str, int] = defaultdict(int)
+        person_doc_chunk_counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+        doc_titles: dict[str, str] = {}
+        person_role_topics: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+
+        topic_pattern = rf"(?<![a-z0-9]){re.escape(norm_topic.replace('-', ' '))}(?![a-z0-9])"
+        topic_pattern_raw = rf"(?<![a-z0-9]){re.escape(norm_topic)}(?![a-z0-9])"
 
         for chunk in role_chunks:
-            # Check if chunk relates to the target topic
+            doc_titles[chunk.doc_id] = chunk.title
             chunk_matches_topic = (
                 norm_topic in chunk.topics
-                or norm_topic.replace("-", " ") in chunk.text.lower()
-                or norm_topic.replace("-", " ") in chunk.title.lower()
+                or bool(re.search(topic_pattern, chunk.text.lower()))
+                or bool(re.search(topic_pattern_raw, chunk.text.lower()))
+                or bool(re.search(topic_pattern, chunk.title.lower()))
             )
-            if not chunk_matches_topic:
-                continue
 
-            # Check mentions for known people
             for person_name in PEOPLE_TITLE_MAP:
                 is_author = person_name.lower() in chunk.author.lower()
                 is_in_text = person_name.lower() in chunk.text.lower()
                 if is_author or is_in_text:
-                    person_evidence[person_name]["count"] += 1
-                    person_evidence[person_name]["doc_counts"][chunk.title] += 1
                     for t in chunk.topics:
-                        person_evidence[person_name]["topic_counts"][t] += 1
+                        person_role_topics[person_name][t] += 1
 
-        # Also collect other topics for each person across all their viewable chunks
-        for chunk in role_chunks:
-            for person_name in PEOPLE_TITLE_MAP:
-                if person_name in person_evidence:
-                    if (
-                        person_name.lower() in chunk.author.lower()
-                        or person_name.lower() in chunk.text.lower()
-                    ):
-                        for t in chunk.topics:
-                            person_evidence[person_name]["topic_counts"][t] += 1
+                    if chunk_matches_topic:
+                        person_matching_docs[person_name].add(chunk.doc_id)
+                        person_chunk_counts[person_name] += 1
+                        person_doc_chunk_counts[person_name][chunk.doc_id] += 1
 
-        if not person_evidence:
+        candidates = []
+        for person_name in PEOPLE_TITLE_MAP:
+            docs_set = person_matching_docs.get(person_name, set())
+            if not docs_set:
+                continue
+            candidates.append(
+                {
+                    "name": person_name,
+                    "docs": docs_set,
+                    "chunk_count": person_chunk_counts[person_name],
+                }
+            )
+
+        if not candidates:
             return []
 
-        # Sort descending by evidence count
-        sorted_people = sorted(
-            person_evidence.items(),
-            key=lambda item: (item[1]["count"], item[0]),
-            reverse=True,
-        )
+        # Sort key: (-len(docs), -chunk_count, name ascending)
+        candidates.sort(key=lambda x: (-len(x["docs"]), -x["chunk_count"], x["name"]))
 
         experts: list[Expert] = []
-        for name, data in sorted_people:
-            if data["count"] <= 0:
-                continue
+        for cand in candidates[:3]:
+            name = cand["name"]
+            docs_set = cand["docs"]
 
-            # Most frequent document source
-            sample_src = ""
-            if data["doc_counts"]:
-                sample_src = max(data["doc_counts"].items(), key=lambda x: x[1])[0]
+            # sample_source = title of the person's document with the most matching chunks
+            top_doc_id = max(person_doc_chunk_counts[name].items(), key=lambda item: item[1])[0]
+            sample_source = doc_titles.get(top_doc_id, top_doc_id)
 
-            # Top 3 topics
-            sorted_topics = [
-                t for t, _ in sorted(data["topic_counts"].items(), key=lambda x: x[1], reverse=True)
+            # topics = top 3 topics from the role-visible chunks only
+            top_topics_sorted = [
+                t
+                for t, _ in sorted(
+                    person_role_topics[name].items(), key=lambda item: item[1], reverse=True
+                )
             ]
-            top_topics = sorted_topics[:3] if sorted_topics else [norm_topic]
+            top_topics = top_topics_sorted[:3] if top_topics_sorted else [norm_topic]
 
             experts.append(
                 Expert(
                     name=name,
                     role=PEOPLE_TITLE_MAP.get(name, "Subject Matter Expert"),
-                    evidence_count=data["count"],
+                    evidence_count=len(docs_set),
                     topics=top_topics,
-                    sample_source=sample_src,
+                    sample_source=sample_source,
                 )
             )
-            if len(experts) >= 3:
-                break
 
         return experts
     except Exception as e:

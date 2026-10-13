@@ -15,6 +15,7 @@ Each connector:
 from __future__ import annotations
 
 import json
+import math
 import sys
 from email import policy
 from email.parser import BytesParser
@@ -27,9 +28,23 @@ from pypdf import PdfReader
 from contracts import Chunk, Role, Source
 from modules.ingestion.chunker import make_chunk_id, split_words_with_overlap
 
+REQUIRED_META = (
+    "doc_id",
+    "title",
+    "source_type",
+    "version",
+    "date",
+    "author",
+    "owner",
+    "status",
+    "supersedes",
+    "allowed_roles",
+    "topics",
+)
+
 
 def load_sidecar(doc_file: Path) -> Optional[dict]:
-    """Load sidecar metadata file for a document, trying <file>.meta.json and <stem>.meta.json."""
+    """Load sidecar metadata file for a document, failing closed on missing keys or empty allowed_roles."""
     candidates = [
         doc_file.parent / f"{doc_file.name}.meta.json",
         doc_file.with_suffix(".meta.json"),
@@ -38,7 +53,23 @@ def load_sidecar(doc_file: Path) -> Optional[dict]:
         if candidate.exists():
             try:
                 with open(candidate, "r", encoding="utf-8") as f:
-                    return json.load(f)
+                    data = json.load(f)
+                if not isinstance(data, dict):
+                    sys.stderr.write(f"Invalid sidecar JSON format in {candidate}: skipping\n")
+                    return None
+                missing_keys = [k for k in REQUIRED_META if k not in data]
+                if missing_keys:
+                    sys.stderr.write(
+                        f"Sidecar {candidate} missing required keys {missing_keys}: skipping\n"
+                    )
+                    return None
+                allowed_roles = data.get("allowed_roles")
+                if not allowed_roles or not isinstance(allowed_roles, list):
+                    sys.stderr.write(
+                        f"Sidecar {candidate} has empty or invalid allowed_roles: skipping\n"
+                    )
+                    return None
+                return data
             except Exception as e:
                 sys.stderr.write(f"Error loading sidecar {candidate}: {e}\n")
                 return None
@@ -85,33 +116,44 @@ class SharePointConnector:
 
             try:
                 doc = Document(str(docx_path))
-                # Group text into sections by heading or paragraph groups
-                sections: list[tuple[str, list[str]]] = []
-                current_heading = "section 1"
-                current_paras: list[str] = []
-                section_counter = 1
+                raw_sections: list[list[str]] = []
+                current_section: list[str] = []
 
                 for para in doc.paragraphs:
                     text = para.text.strip()
                     if not text:
                         continue
-                    if para.style.name.startswith("Heading"):
-                        if current_paras:
-                            sections.append((current_heading, current_paras))
-                            current_paras = []
-                        section_counter += 1
-                        current_heading = f"section {section_counter}"
-                    current_paras.append(text)
+                    style_name = para.style.name if para.style else ""
+                    is_heading_or_title = style_name.startswith(("Heading", "Title"))
+                    if is_heading_or_title and current_section:
+                        raw_sections.append(current_section)
+                        current_section = []
+                    current_section.append(text)
 
-                if current_paras:
-                    sections.append((current_heading, current_paras))
-                if not sections and doc.paragraphs:
-                    # Fallback for document with no headings
-                    sections = [("section 1", [p.text.strip() for p in doc.paragraphs if p.text.strip()])]
+                if current_section:
+                    raw_sections.append(current_section)
+
+                if not raw_sections:
+                    continue
+
+                # Merge sections with fewer than 10 words into the next section
+                merged_sections: list[list[str]] = []
+                for sec in raw_sections:
+                    if merged_sections and sum(len(p.split()) for p in merged_sections[-1]) < 10:
+                        prev = merged_sections.pop()
+                        merged_sections.append(prev + sec)
+                    else:
+                        merged_sections.append(sec)
+
+                # If the very last section still has fewer than 10 words, merge backwards
+                if len(merged_sections) > 1 and sum(len(p.split()) for p in merged_sections[-1]) < 10:
+                    last = merged_sections.pop()
+                    merged_sections[-1].extend(last)
 
                 chunk_index = 1
-                for section_loc, paras in sections:
-                    full_text = "\n\n".join(paras)
+                for sec_idx, sec_paras in enumerate(merged_sections, start=1):
+                    section_loc = f"section {sec_idx}"
+                    full_text = "\n\n".join(sec_paras)
                     text_windows = split_words_with_overlap(full_text, chunk_size=150, overlap=20)
                     for win in text_windows:
                         chunk_id = make_chunk_id(meta["doc_id"], chunk_index)
@@ -120,15 +162,15 @@ class SharePointConnector:
                                 chunk_id=chunk_id,
                                 doc_id=meta["doc_id"],
                                 text=win,
-                                source_type=meta.get("source_type", "sharepoint"),
+                                source_type=meta["source_type"],
                                 title=meta["title"],
                                 version=meta.get("version"),
                                 date=meta["date"],
                                 author=meta["author"],
                                 owner=meta.get("owner", meta["author"]),
-                                status=meta.get("status", "current"),
+                                status=meta["status"],
                                 supersedes=meta.get("supersedes"),
-                                allowed_roles=meta.get("allowed_roles", ["analyst", "manager"]),
+                                allowed_roles=meta["allowed_roles"],
                                 location=section_loc,
                                 topics=meta.get("topics", []),
                             )
@@ -194,15 +236,15 @@ class SopConnector:
                                     chunk_id=chunk_id,
                                     doc_id=meta["doc_id"],
                                     text=win,
-                                    source_type=meta.get("source_type", "sop" if folder_name == "sop" else "pdf"),
+                                    source_type=meta["source_type"],
                                     title=meta["title"],
                                     version=meta.get("version"),
                                     date=meta["date"],
                                     author=meta["author"],
                                     owner=meta.get("owner", meta["author"]),
-                                    status=meta.get("status", "current"),
+                                    status=meta["status"],
                                     supersedes=meta.get("supersedes"),
-                                    allowed_roles=meta.get("allowed_roles", ["analyst", "manager"]),
+                                    allowed_roles=meta["allowed_roles"],
                                     location=f"page {page_num}",
                                     topics=meta.get("topics", []),
                                 )
@@ -277,15 +319,15 @@ class EmailConnector:
                             chunk_id=chunk_id,
                             doc_id=meta["doc_id"],
                             text=win,
-                            source_type="email",
+                            source_type=meta["source_type"],
                             title=meta["title"],
                             version=meta.get("version"),
                             date=meta["date"],
                             author=meta["author"],
                             owner=meta.get("owner", meta["author"]),
-                            status=meta.get("status", "current"),
+                            status=meta["status"],
                             supersedes=meta.get("supersedes"),
-                            allowed_roles=meta.get("allowed_roles", ["analyst", "manager"]),
+                            allowed_roles=meta["allowed_roles"],
                             location="email body",
                             topics=meta.get("topics", []),
                         )
@@ -299,7 +341,7 @@ class EmailConnector:
 class TeamsConnector:
     """Ingests Teams channel conversation dumps (.json).
 
-    Groups messages into chunks of 3 to 5 messages with location string 'msg A-B'.
+    Groups messages into balanced chunks of 3 to 5 messages with location string 'msg A-B'.
 
     Microsoft Graph API Integration (Production Architecture):
     ----------------------------------------------------------
@@ -312,12 +354,12 @@ class TeamsConnector:
        and team sensitivity labels to align channel visibility with user organizational roles (intern, analyst, manager).
     """
 
-    def __init__(self, folder_name: str = "teams", batch_size: int = 4):
+    def __init__(self, folder_name: str = "teams", batch_size: Optional[int] = None):
         self.folder_name = folder_name
-        self.batch_size = max(3, min(5, batch_size))
+        self.batch_size = batch_size
 
     def load(self, raw_dir: Path) -> list[Chunk]:
-        """Load Teams channel JSON dumps into Chunks."""
+        """Load Teams channel JSON dumps into balanced Chunks of 3 to 5 messages."""
         chunks: list[Chunk] = []
         target_dir = raw_dir / self.folder_name
         if not target_dir.is_dir():
@@ -338,11 +380,19 @@ class TeamsConnector:
                 if not isinstance(messages, list) or not messages:
                     continue
 
-                # Group into batches of 3 to 5 messages
+                # Balanced partitioning:
+                # n = len(messages); k = max(1, ceil(n/5)); base, extra = divmod(n, k);
+                # the first `extra` groups get base+1 messages.
+                n = len(messages)
+                k = max(1, math.ceil(n / 5))
+                base, extra = divmod(n, k)
+
                 batches: list[list[dict]] = []
-                for i in range(0, len(messages), self.batch_size):
-                    batch = messages[i : i + self.batch_size]
-                    batches.append(batch)
+                idx = 0
+                for group_i in range(k):
+                    group_size = base + 1 if group_i < extra else base
+                    batches.append(messages[idx : idx + group_size])
+                    idx += group_size
 
                 for chunk_index, batch in enumerate(batches, start=1):
                     msg_ids = [m.get("msg_id", idx) for idx, m in enumerate(batch, start=1)]
@@ -352,7 +402,7 @@ class TeamsConnector:
                     text_lines = []
                     for m in batch:
                         author = m.get("author", "Unknown")
-                        text = m.get("text", "")
+                        text = m.get("text", "").replace("\r\n", " ").replace("\n", " ").strip()
                         ts = m.get("timestamp", "")
                         text_lines.append(f"[{author} {ts}]: {text}")
 
@@ -364,15 +414,15 @@ class TeamsConnector:
                             chunk_id=chunk_id,
                             doc_id=meta["doc_id"],
                             text=batch_text,
-                            source_type="teams",
+                            source_type=meta["source_type"],
                             title=meta["title"],
                             version=meta.get("version"),
                             date=meta["date"],
                             author=meta["author"],
                             owner=meta.get("owner", meta["author"]),
-                            status=meta.get("status", "current"),
+                            status=meta["status"],
                             supersedes=meta.get("supersedes"),
-                            allowed_roles=meta.get("allowed_roles", ["analyst", "manager"]),
+                            allowed_roles=meta["allowed_roles"],
                             location=loc,
                             topics=meta.get("topics", []),
                         )
