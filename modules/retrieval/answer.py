@@ -99,16 +99,21 @@ def answer(question: str, role: Role) -> AskResponse:
         top_score = scored_hits[0][0]
 
         # 2. Answerability Gate:
-        # Share of distinctive query tokens appearing in top chunks must be >= 0.5
-        # and top BM25 score must exceed MIN_SCORE.
+        # Score only the user's own words minus generic verbs to prevent
+        # generic glossary expansion tokens from inflating the token share.
         chunk_tokens: set[str] = set()
         for chunk in top_chunks:
             chunk_tokens.update(
                 tokenize(f"{chunk.title} {chunk.text} {' '.join(chunk.topics)}")
             )
 
-        overlap = len(distinctive_tokens.intersection(chunk_tokens))
-        token_share = (overlap / len(distinctive_tokens)) if distinctive_tokens else 0.0
+        generic_verbs = {'find', 'found', 'show', 'tell', 'give', 'explain', 'need', 'know', 'get'}
+        own = set(t for t in tokenize(question, remove_stopwords=True) if t not in generic_verbs)
+        if not own:
+            own = set(distinctive_tokens)
+
+        overlap = len(own.intersection(chunk_tokens))
+        token_share = (overlap / len(own)) if own else 0.0
 
         if token_share < MIN_TOKEN_SHARE or top_score < MIN_SCORE:
             return AskResponse(

@@ -163,6 +163,25 @@ def run_selftest():
             assert len(resp.citations) >= 1, f"{gid} should have >=1 citations when answerable"
         print(f"  -> {gid} ({role:7s}): answerable={str(resp.answerable):5s}, citations={len(resp.citations)}, confidence={resp.confidence}")
 
+    # 8. Regression assertion: G6 intern audit query on real corpus
+    print("\n[Test 8] Regression: G6 intern audit refusal on real corpus (chunks.json)...")
+    from app import config
+    chunks_file = config.chunks_path()
+    if chunks_file.name == 'chunks.json':
+        resp_g6 = answer("What recurring deviation did the audit find?", role="intern")
+        assert resp_g6.answerable is False, (
+            f"Regression failed: Intern audit question on real corpus should be answerable=False, got {resp_g6.answerable}"
+        )
+        assert len(resp_g6.citations) == 0, (
+            f"Regression failed: Intern audit question on real corpus should have 0 citations, got {len(resp_g6.citations)}"
+        )
+        assert resp_g6.confidence == "low", (
+            f"Regression failed: Intern audit question confidence should be 'low', got {resp_g6.confidence}"
+        )
+        print("  -> PASS: G6 intern audit question cleanly refused with no citations on real corpus.")
+    else:
+        print(f"  -> SKIPPED: Real chunks.json not present (currently using {chunks_file.name}).")
+
     print("\n" + "=" * 60)
     print("ALL RETRIEVAL SELFTESTS PASSED SUCCESSFULLY!")
     print("=" * 60)
