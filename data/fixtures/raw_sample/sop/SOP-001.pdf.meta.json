@@ -1,0 +1,20 @@
+{
+  "doc_id": "SOP-001",
+  "title": "SOP-001 Deviation Handling",
+  "source_type": "sop",
+  "version": "1.0",
+  "date": "2025-01-15",
+  "author": "Priya Rao",
+  "owner": "Priya Rao",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "intern",
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "deviation",
+    "quality-system"
+  ]
+}

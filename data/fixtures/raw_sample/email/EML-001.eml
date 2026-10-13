@@ -1,0 +1,20 @@
+From: Dr. Meera Iyer <meera.iyer@novacure.com>
+To: arjun.menon@novacure.com, qa-team@novacure.com
+Subject: Storage temperature change (from QA Head)
+Date: Fri, 18 Sep 2026 09:30:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Team,
+
+Following recent stability monitoring data and regulatory advisories:
+Until SOP-014 is revised, store vaccine batches at 2 to 6 =C2=B0C.
+
+Please ensure warehouse temperature limits are set to these tighter threshold=
+s immediately.
+Priya Rao will review any related deviation reports.
+
+Regards,
+Dr. Meera Iyer
+QA Head, Novacure Labs

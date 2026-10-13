@@ -1,0 +1,19 @@
+{
+  "doc_id": "AUD-001",
+  "title": "Audit Findings Summary",
+  "source_type": "sharepoint",
+  "version": "1.0",
+  "date": "2025-10-12",
+  "author": "Dr. Meera Iyer",
+  "owner": "Dr. Meera Iyer",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "manager"
+  ],
+  "topics": [
+    "audit",
+    "deviation",
+    "cold-chain"
+  ]
+}

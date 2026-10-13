@@ -1,0 +1,19 @@
+{
+  "doc_id": "TEAMS-COLDCHAIN",
+  "title": "#cold-chain",
+  "source_type": "teams",
+  "version": null,
+  "date": "2026-09-19",
+  "author": "Arjun Menon",
+  "owner": "Arjun Menon",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "cold-chain",
+    "storage-temperature"
+  ]
+}

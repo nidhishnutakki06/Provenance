@@ -1,0 +1,19 @@
+{
+  "doc_id": "EQP-001",
+  "title": "Cold Storage Unit Equipment Manual",
+  "source_type": "pdf",
+  "version": "1.0",
+  "date": "2025-01-05",
+  "author": "Arjun Menon",
+  "owner": "Arjun Menon",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "equipment",
+    "cold-chain"
+  ]
+}

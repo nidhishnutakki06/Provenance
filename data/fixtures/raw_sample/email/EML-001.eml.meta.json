@@ -1,0 +1,19 @@
+{
+  "doc_id": "EML-001",
+  "title": "Storage temperature change (from QA Head)",
+  "source_type": "email",
+  "version": null,
+  "date": "2026-09-18",
+  "author": "Dr. Meera Iyer",
+  "owner": "Dr. Meera Iyer",
+  "status": "current",
+  "supersedes": null,
+  "allowed_roles": [
+    "analyst",
+    "manager"
+  ],
+  "topics": [
+    "cold-chain",
+    "storage-temperature"
+  ]
+}
