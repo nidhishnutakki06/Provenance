@@ -1,10 +1,187 @@
+@import '@fontsource-variable/playfair-display/index.css';
+@import '@fontsource-variable/playfair-display/wght-italic.css';
+@import '@fontsource-variable/dm-sans/index.css';
+@import '@fontsource-variable/jetbrains-mono/index.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  /* Design Tokens - Light Theme (default) */
+  --bg:            #FBF7F2;   /* warm cream page background */
+  --surface:       #FFFFFF;   /* cards */
+  --surface-2:     #F5F0EA;   /* subtle panels */
+  --border:        #E7E0D8;
+  --text:          #14202B;
+  --text-muted:    #5B6773;
+  --accent:        #3F86B3;   /* steel blue */
+  --accent-hover:  #336F96;
+  --accent-soft:   #DCEEF2;   /* tinted backgrounds, chips */
+  --glow-teal:     #7CC3CC;
+  --glow-blue:     #4286B5;
+
+  /* Semantic Cards & Badges (Light) */
+  --danger-soft:    #FBEBE9;
+  --danger-border:  #E7B7B2;
+  --danger-text:    #9E3128;
+  --success-soft:   #E8F4EE;
+  --success-border: #AED6C2;
+  --success-text:   #1F6B52;
+  --violet-soft:    #EFEAF7;
+  --violet-text:    #5B3FA0;
+
+  /* Typography Roles */
+  --font-display: 'Playfair Display', 'Playfair Display Variable', Georgia, 'Times New Roman', serif;
+  --font-sans:    'DM Sans', 'DM Sans Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:    'JetBrains Mono', 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* Semantic Status Colors */
+  --success:       #2E8B6E;
+  --warning:       #C98A1B;
+  --danger:        #C4483E;
+  --neutral:       #6B7785;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400 900;
+  src: local('Playfair Display Variable'), local('Playfair Display');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 1000;
+  src: local('DM Sans Variable'), local('DM Sans');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 800;
+  src: local('JetBrains Mono Variable'), local('JetBrains Mono');
+}
+
+.dark {
+  /* Design Tokens - Dark Theme */
+  --bg:            #060D1F;
+  --surface:       #0E1A33;
+  --surface-2:     #13233F;
+  --border:        #20324F;
+  --text:          #EAF2FB;
+  --text-muted:    #9BB0C7;
+  --accent:        #4DA8F0;
+  --accent-hover:  #7CC3F8;
+  --accent-soft:   #112A4A;
+  --glow-teal:     #3FA9F5;
+  --glow-blue:     #1E4FA8;
+
+  /* Semantic Cards & Badges (Dark) */
+  --danger-soft:    #2B1519;
+  --danger-border:  #6B2E33;
+  --danger-text:    #F2B8B3;
+  --success-soft:   #0F2A22;
+  --success-border: #1F5A45;
+  --success-text:   #8FD4B6;
+  --violet-soft:    #241B3D;
+  --violet-text:    #C7B5F0;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--bg);
+    color: var(--text);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Headings: Playfair Display */
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  /* Monospace standard: JetBrains Mono, no ligatures in UI */
+  code, kbd, samp, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-variant-ligatures: none;
+    letter-spacing: 0;
+  }
+}
+
+/* Fixed ambient background glow - smooth full-viewport blend without seams or cut-offs */
+.ambient-glow-layer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at 90% 12%,
+    var(--glow-teal) 0%,
+    var(--glow-blue) 30%,
+    transparent 65%
+  );
+  opacity: 0.35;
+  filter: blur(90px);
+}
+
+.dark .ambient-glow-layer {
+  opacity: 0.25;
+  filter: blur(110px);
+  background: radial-gradient(
+    circle at 90% 12%,
+    var(--glow-teal) 0%,
+    var(--glow-blue) 35%,
+    transparent 70%
+  );
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
 }
